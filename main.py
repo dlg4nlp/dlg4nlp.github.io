@@ -75,11 +75,11 @@ def home():
     return render_template("index.html", **data)
 
 
-@app.route("/help.html")
-def about():
-    data = _data()
-    data["FAQ"] = site_data["faq"]["FAQ"]
-    return render_template("help.html", **data)
+#@app.route("/help.html")
+#def about():
+#    data = _data()
+#    data["FAQ"] = site_data["faq"]["FAQ"]
+#    return render_template("help.html", **data)
 
 
 @app.route("/papers.html")
