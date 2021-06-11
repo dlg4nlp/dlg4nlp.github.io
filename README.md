@@ -1,5 +1,5 @@
 <p align="center">
-<img src="static/images/graph4nlp_logo.png" width="800" class="center" alt="logo"/>
+<img src="static/images/G4L-logo.png" width="800" class="center" alt="logo"/>
     <br/>
 </p>
  
