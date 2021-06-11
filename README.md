@@ -1,15 +1,57 @@
+<p align="center">
+<img src="./imgs/graph4nlp_logo.png" width="800" class="center" alt="logo"/>
+    <br/>
+</p>
+ 
+[pypi-image]: https://badge.fury.io/py/graph4nlp.svg
+
+[pypi-url]: https://pypi.org/project/graph4nlp
+
+[license-image]:https://img.shields.io/badge/License-Apache%202.0-blue.svg
+
+[license-url]:https://github.com/graph4ai/graph4nlp/blob/master/LICENSE
+
+[contributor-image]:https://img.shields.io/github/contributors/graph4ai/graph4nlp
+
+[contributor-url]:https://github.com/graph4ai/graph4nlp/contributors
+
+[contributing-image]:https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
+
+[contributing-url]:to_be_add
+
+[issues-image]:https://img.shields.io/github/issues/graph4ai/graph4nlp
+
+[issues-url]:https://github.com/graph4ai/graph4nlp/issues
+
+[forks-image]:https://img.shields.io/github/forks/graph4ai/graph4nlp
+
+[forks-url]:https://github.com/graph4ai/graph4nlp/fork
+
+[stars-image]:https://img.shields.io/github/stars/graph4ai/graph4nlp
+
+[stars-url]:https://github.com/graph4ai/graph4nlp/stars
+
+![Last Commit](https://img.shields.io/github/last-commit/graph4ai/graph4nlp)
+[![pypi][pypi-image]][pypi-url]
+[![Contributors][contributor-image]][contributor-url]
+[![Contributing][contributing-image]][contributing-url]
+[![License][license-image]][license-url]
+[![Issues][issues-image]][issues-url]
+[![Fork][forks-image]][forks-url]
+[![Star][stars-image]][stars-url]
+
 # Graph4NLP
 
 ***Graph4NLP*** is an easy-to-use library for R&D at the intersection of **Deep Learning on Graphs** and
 **Natural Language Processing** (i.e., DLG4NLP). It provides both **full implementations** of state-of-the-art models for data scientists and also **flexible interfaces** to build customized models for researchers and developers with whole-pipeline support. Built upon highly-optimized runtime libraries including [DGL](https://github.com/dmlc/dgl) , ***Graph4NLP*** has both high running efficiency and great extensibility. The architecture of ***Graph4NLP*** is shown in the following figure, where boxes with dashed lines represents the features under development. Graph4NLP consists of four different layers: 1) Data Layer, 2) Module Layer, 3) Model Layer, and 4) Application Layer.
 
 <p align="center">
-<img src="static/images/arch.png" alt="architecture" width="700" />
-<br>
-<b>Figure</b>: Graph4NLP Overall Architecture
+    <img src="docs/arch.png" alt="architecture" width="700" />
+    <br>
+    <b>Figure</b>: Graph4NLP Overall Architecture
 </p>
 
-## <img src="static/images/new.png" alt='new' width=30 /> Graph4NLP news
+## <img src="docs/new.png" alt='new' width=30 /> Graph4NLP news
 **06/05/2021:** The **v0.4.1 release**. Try it out!
 
 ## Quick tour
@@ -19,7 +61,7 @@ semantic parsing, and various other NLP tasks that can be abstracted as graph-to
 performance).
 
 <!-- If you want to further improve model performance, we also support pre-trained models including [BERT](https://arxiv.org/abs/1810.04805), etc.
--->
+ -->
 We also offer other high-level model APIs such as graph-to-tree models. If you are interested in DLG4NLP related research problems, you are very welcome to use our library and refer to our [graph4nlp survey](to_be_add).
 
 ```python
@@ -31,8 +73,8 @@ from graph4nlp.pytorch.modules.utils.config_utils import update_values, get_yaml
 
 # build dataset
 jobs_dataset = JobsDataset(root_dir='graph4nlp/pytorch/test/dataset/jobs',
-topology_builder=DependencyBasedGraphConstruction,
-topology_subdir='DependencyGraph')  # You should run stanfordcorenlp at background
+                           topology_builder=DependencyBasedGraphConstruction,
+                           topology_subdir='DependencyGraph')  # You should run stanfordcorenlp at background
 vocab_model = jobs_dataset.vocab_model
 
 # build model
@@ -51,8 +93,8 @@ scores = graph2seq(batch_data["graph_data"], batch_data["tgt_seq"])  # [Batch_si
 
 Our Graph4NLP computing flow is shown as below.
 <p align="center">
-<img src="static/images/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
-<br/>
+<img src="./imgs/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
+    <br/>
 </p>
 
 ## Graph4NLP Models and Applications
@@ -82,7 +124,7 @@ We provide a comprehensive collection of NLP applications, together with detaile
 |----------------------------|:--------------------------------:|:-------------------:|----------------------------------------------|--------------------|:-----------------------------:|
 | Text classification        | TRECT<br> CAirline<br> CNSST<br> |           GAT       | Dependency                                   |        Accuracy    | 0.948<br> 0.769<br> 0.538<br> |
 | Semantic Parsing           |               JOBS               |           SAGE      | Constituency                                 | Execution accuracy |             0.936             |
-| Question generation        |               SQuAD             |           GGNN       | Dependency                                      | BLEU-4             |             0.15175                |
+| Question generation        |               SQuAD             |           GGNN       | Dependency                                      | BLEU-4             |             0.15175	            |
 | Machine translation        |              IWSLT14             |           GCN       | Dynamic                                      | BLEU-4             |             0.3212            |
 | Summarization              |             CNN(30k)             |           GCN       | Dependency                                   | ROUGE-1            |              26.4             |
 | Knowledge graph completion | Kinship                          |           GCN      | Dependency                                    | MRR                | 82.4                          |
@@ -207,12 +249,16 @@ If you found this code useful, please consider citing the following paper (pleas
 Node Embeddings."** In *Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS 2020), Dec
 6-12, 2020.*
 
-@article{chen2020iterative,
-title={Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust Node Embeddings},
-author={Chen, Yu and Wu, Lingfei and Zaki, Mohammed},
-journal={Advances in Neural Information Processing Systems},
-volume={33},
-year={2020}
-} -->
+    @article{chen2020iterative,
+      title={Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust Node Embeddings},
+      author={Chen, Yu and Wu, Lingfei and Zaki, Mohammed},
+      journal={Advances in Neural Information Processing Systems},
+      volume={33},
+      year={2020}
+    } -->
 
+## Team
+Graph4AI Team. Lingfei Wu, Yu Chen, Kai Shen, Xiaojie Guo, Hanning Gao, Shucheng Li, Saizhuo Wang
 
+## License
+Graph4NLP uses Apache License 2.0.

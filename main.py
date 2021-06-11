@@ -239,12 +239,12 @@ def serve(path):
 
 @freezer.register_generator
 def generator():
-#    for paper in site_data["papers"]:
-#        yield "poster", {"poster": str(paper["UID"])}
-#    for speaker in site_data["speakers"]:
-#        yield "speaker", {"speaker": str(speaker["UID"])}
-#    for workshop in site_data["workshops"]:
-#        yield "workshop", {"workshop": str(workshop["UID"])}
+    for paper in site_data["papers"]:
+        yield "poster", {"poster": str(paper["UID"])}
+    for speaker in site_data["speakers"]:
+        yield "speaker", {"speaker": str(speaker["UID"])}
+    for workshop in site_data["workshops"]:
+        yield "workshop", {"workshop": str(workshop["UID"])}
 
     for key in site_data:
         yield "serve", {"path": key}
