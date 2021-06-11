@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- External Javascript libs_ext  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"
+            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js"
+            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+            crossorigin="anonymous"></script>
+
+
+    <!-- Library libs_ext -->
+    <script src="static/js/libs_ext/typeahead.bundle.js"></script>
+
+
+    <!--    Internal Libs -->
+    <script src="static/js/data/api.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY="
+          crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+            href="static/css/Lato.css"
+            rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet"/>
+    <link
+            href="static/css/Cuprum.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/main.css"/>
+<!--    <link rel="stylesheet" href="static/css/fa_regular.css"/>-->
+    <link rel="stylesheet" href="static/css/fa_solid.css"/>
+    <link rel="stylesheet" href="static/css/lazy_load.css"/>
+    <link rel="stylesheet" href="static/css/typeahead.css"/>
+
+    <title>DLG4NLP</title>
+    
+</head>
+
+<body>
+<!-- NAV -->
+
+<nav
+        class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto"
+        id="main-nav"
+>
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img
+                    class="logo" src="static/images/G4L-logo.png"
+                    height="auto"
+            width="200px"
+            />
+        </a>
+        
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+                class="collapse navbar-collapse text-right flex-grow-1"
+                id="navbarNav"
+        >
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="papers.html">Paper</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="workshops.html">Workshop</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view
+">Tutorial</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://github.com/graph4ai/graph4nlp_demo">Demo</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://saizhuo.wang/g4nlp/index.html">Docs</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://github.com/graph4ai/graph4nlp">GitHub</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="blogs.html">Blog</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- User Overrides -->
+
+<style>
+  .back {
+    background: url("static/images/main.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .back h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+  }
+</style>
+
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+  <div class="row header p-6 m-5">
+    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
+      <h2>
+        Deep Learning on Graphs for Natural Language Processing
+      </h2>
+      <h2 class="p-5">
+        
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+         
+    </div>
+    <!-- Content -->
+    <div class="content">
+        
+
+<h1>Graph4NLP</h1>
+<p><strong><em>Graph4NLP</em></strong> is an easy-to-use library for R&amp;D at the intersection of <strong>Deep Learning on Graphs</strong> and
+<strong>Natural Language Processing</strong> (i.e., DLG4NLP). It provides both <strong>full implementations</strong> of state-of-the-art models for data scientists and also <strong>flexible interfaces</strong> to build customized models for researchers and developers with whole-pipeline support. Built upon highly-optimized runtime libraries including <a href="https://github.com/dmlc/dgl">DGL</a> , <strong><em>Graph4NLP</em></strong> has both high running efficiency and great extensibility. The architecture of <strong><em>Graph4NLP</em></strong> is shown in the following figure, where boxes with dashed lines represents the features under development. Graph4NLP consists of four different layers: 1) Data Layer, 2) Module Layer, 3) Model Layer, and 4) Application Layer.</p>
+<p align="center">
+<img src="static/images/arch.png" alt="architecture" width="700" />
+<br>
+<b>Figure</b>: Graph4NLP Overall Architecture
+</p>
+
+<h2><img src="static/images/new.png" alt='new' width=30 /> Graph4NLP news</h2>
+<p><strong>06/05/2021:</strong> The <strong>v0.4.1 release</strong>. Try it out!</p>
+<h2>Quick tour</h2>
+<p><strong><em>Graph4nlp</em></strong> aims to make it incredibly easy to use GNNs in NLP tasks (check out <a href="http://saizhuo.wang/g4nlp/index.html">Graph4NLP Documentation</a>). Here is an example of how to use the <a href="http://saizhuo.wang/g4nlp/index.html"><em>Graph2seq</em></a> model (widely used in machine translation, question answering,
+semantic parsing, and various other NLP tasks that can be abstracted as graph-to-sequence problem and has shown superior
+performance).</p>
+<!-- If you want to further improve model performance, we also support pre-trained models including [BERT](https://arxiv.org/abs/1810.04805), etc.
+-->
+<p>We also offer other high-level model APIs such as graph-to-tree models. If you are interested in DLG4NLP related research problems, you are very welcome to use our library and refer to our <a href="to_be_add">graph4nlp survey</a>.</p>
+<p>```python
+from graph4nlp.pytorch.datasets.jobs import JobsDataset
+from graph4nlp.pytorch.modules.graph_construction.dependency_graph_construction import DependencyBasedGraphConstruction
+from graph4nlp.pytorch.modules.config import get_basic_args
+from graph4nlp.pytorch.models.graph2seq import Graph2Seq
+from graph4nlp.pytorch.modules.utils.config_utils import update_values, get_yaml_config</p>
+<h1>build dataset</h1>
+<p>jobs_dataset = JobsDataset(root_dir='graph4nlp/pytorch/test/dataset/jobs',
+topology_builder=DependencyBasedGraphConstruction,
+topology_subdir='DependencyGraph')  # You should run stanfordcorenlp at background
+vocab_model = jobs_dataset.vocab_model</p>
+<h1>build model</h1>
+<p>user_args = get_yaml_config("examples/pytorch/semantic_parsing/graph2seq/config/dependency_gcn_bi_sep_demo.yaml")
+args = get_basic_args(graph_construction_name="node_emb", graph_embedding_name="gat", decoder_name="stdrnn")
+update_values(to_args=args, from_args_list=[user_args])
+graph2seq = Graph2Seq.from_args(args, vocab_model)</p>
+<h1>calculation</h1>
+<p>batch_data = JobsDataset.collate_fn(jobs_dataset.train[0:12])</p>
+<p>scores = graph2seq(batch_data["graph_data"], batch_data["tgt_seq"])  # [Batch_size, seq_len, Vocab_size]
+```</p>
+<h2>Overview</h2>
+<p>Our Graph4NLP computing flow is shown as below.</p>
+<p align="center">
+<img src="static/images/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
+<br/>
+</p>
+
+<h2>Graph4NLP Models and Applications</h2>
+<h3>Graph4NLP models</h3>
+<ul>
+<li><a href="https://github.com/graph4ai/graph4nlp/blob/master/graph4nlp/pytorch/models/graph2seq.py">Graph2Seq</a>: a general end-to-end neural encoder-decoder model that maps an input graph to a sequence of tokens.  </li>
+<li><a href="https://github.com/graph4ai/graph4nlp/blob/master/graph4nlp/pytorch/models/graph2tree.py">Graph2Tree</a>: a general end-to-end neural encoder-decoder model that maps an input graph to a tree structure.</li>
+</ul>
+<h3>Graph4NLP applications</h3>
+<p>We provide a comprehensive collection of NLP applications, together with detailed examples as follows:</p>
+<ul>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/text_classification">Text classification</a>: to give the sentence or document an appropriate label.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/semantic_parsing">Semantic parsing</a>: to translate natural language into a machine-interpretable formal meaning representation.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/nmt">Neural machine translation</a>: to translate a sentence in a source language to a different target language.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/summarization">summarization</a>: to generate a shorter version of input texts which could preserve major meaning.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/kg_completion">KG completion</a>: to predict missing relations between two existing entities in konwledge graphs.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/math_word_problem">Math word problem solving</a>: to automatically solve mathematical exercises that provide background information about a problem in easy-to-understand language.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/name_entity_recognition">Name entity recognition</a>: to tag entities in input texts with their corresponding type.</li>
+<li><a href="https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/question_generation">Question generation</a>: to generate an valid and fluent question based on the given passage and target answer (optional).</li>
+</ul>
+<h2>Performance</h2>
+<p>| Task                       |              Dataset             |   GNN    Model      | Graph construction                           | Evaluation         |          Performance          |
+|----------------------------|:--------------------------------:|:-------------------:|----------------------------------------------|--------------------|:-----------------------------:|
+| Text classification        | TRECT<br> CAirline<br> CNSST<br> |           GAT       | Dependency                                   |        Accuracy    | 0.948<br> 0.769<br> 0.538<br> |
+| Semantic Parsing           |               JOBS               |           SAGE      | Constituency                                 | Execution accuracy |             0.936             |
+| Question generation        |               SQuAD             |           GGNN       | Dependency                                      | BLEU-4             |             0.15175                |
+| Machine translation        |              IWSLT14             |           GCN       | Dynamic                                      | BLEU-4             |             0.3212            |
+| Summarization              |             CNN(30k)             |           GCN       | Dependency                                   | ROUGE-1            |              26.4             |
+| Knowledge graph completion | Kinship                          |           GCN      | Dependency                                    | MRR                | 82.4                          |
+| Math word problem          | MAWPS  <br> MATHQA               | SAGE                | Dynamic                                      | Solution accuracy <br> Exact match  | 76.4<br>  61.07  |</p>
+<h2>Installation</h2>
+<p>Currently, users can install Graph4NLP via <strong>pip</strong> or <strong>source code</strong>. Graph4NLP supports the following OSes:</p>
+<ul>
+<li>Linux-based systems (tested on Ubuntu 18.04 and later)</li>
+<li>macOS (only CPU version)</li>
+<li>Windows 10 (only support pytorch &gt;= 1.8)</li>
+</ul>
+<h3>Installation via pip (binaries)</h3>
+<p>We provide pip wheels for all major OS/PyTorch/CUDA combinations. Note that we highly recommend <code>Windows</code> users refer to <code>Installation via source code</code> due to compatibility.</p>
+<h4>Ensure that at least PyTorch (&gt;=1.6.0) is installed:</h4>
+<p>Note that <code>&gt;=1.6.0</code> is ok.
+``` bash
+$ python -c "import torch; print(torch.<strong>version</strong>)"</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>1.6.0
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4>Find the CUDA version PyTorch was installed with (for GPU users):</h4>
+<p>```bash
+$ python -c "import torch; print(torch.version.cuda)"</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>10.2
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4>Install the relevant dependencies:</h4>
+<p><code>torchtext</code> is needed since Graph4NLP relies on it to implement embeddings.
+Please pay attention to the PyTorch requirements before installing <code>torchtext</code> with the following script! For detailed version matching please refer <a href="https://pypi.org/project/torchtext/">here</a>.
+<code>bash
+pip install torchtext # &gt;=0.7.0</code></p>
+<h4>Install Graph4NLP</h4>
+<p><code>bash
+pip install graph4nlp${CUDA}</code>
+where <code>${CUDA}</code> should be replaced by the specific CUDA version (<code>none</code> (CPU version), <code>"-cu92"</code>, <code>"-cu101"</code>, <code>"-cu102"</code>, <code>"-cu110"</code>). The following table shows the concrete command lines. For CUDA 11.1 users, please refer to <code>Installation via source code</code>.</p>
+<p>| Platform  | Command                       |
+| --------- | ----------------------------- |
+| CPU       | <code>pip install graph4nlp</code>   |
+| CUDA 9.2  | <code>pip install graph4nlp-cu92</code>  |
+| CUDA 10.1 | <code>pip install graph4nlp-cu101</code> |
+| CUDA 10.2 | <code>pip install graph4nlp-cu102</code> |
+| CUDA 11.0 | <code>pip install graph4nlp-cu110</code> |</p>
+<h3>Installation via source code</h3>
+<h4>Ensure that at least PyTorch (&gt;=1.6.0) is installed:</h4>
+<p>Note that <code>&gt;=1.6.0</code> is ok.
+``` bash
+$ python -c "import torch; print(torch.<strong>version</strong>)"</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>1.6.0
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4>Find the CUDA version PyTorch was installed with (for GPU users):</h4>
+<p>```bash
+$ python -c "import torch; print(torch.version.cuda)"</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>10.2
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4>Install the relevant dependencies:</h4>
+<p><code>torchtext</code> is needed since Graph4NLP relies on it to implement embeddings.
+Please pay attention to the PyTorch requirements before installing <code>torchtext</code> with the following script! For detailed version matching please refer <a href="https://pypi.org/project/torchtext/">here</a>.
+<code>bash
+pip install torchtext # &gt;=0.7.0</code></p>
+<h4>Download the source code of <code>Graph4NLP</code> from Github:</h4>
+<p><code>bash
+git clone https://github.com/graph4ai/graph4nlp.git
+cd graph4nlp</code></p>
+<h4>Configure the CUDA version</h4>
+<p>Then run <code>./configure</code> (or <code>./configure.bat</code>  if you are using Windows 10) to config your installation. The configuration program will ask you to specify your CUDA version. If you do not have a GPU, please type 'cpu'.
+<code>bash
+./configure</code></p>
+<h4>Install the relevant packages:</h4>
+<p>Finally, install the package:</p>
+<p><code>shell
+python setup.py install</code></p>
+<h2>Major Releases</h2>
+<p>| Releases | Date       | Features                                                     |
+| -------- | ---------- | ------------------------------------------------------------ |
+| v0.4.1   | 2021-06-05 | - Support the whole pipeline of Graph4NLP<br />- GraphData and Dataset support |</p>
+<h2>New to Deep Learning on Graphs for NLP?</h2>
+<p>If you want to learn more on applying Deep Learning on Graphs techniques to NLP tasks, you can refer to our survey paper which provides an overview of this existing research direction. If you want detailed reference to our library, please refer to our docs.</p>
+<!-- [Docs]() | [Graph4nlp survey]() | [Related paper list]() | [Workshops]() -->
+<ul>
+<li>Documentation: <a href="http://saizhuo.wang/g4nlp/index.html">Docs</a>  </li>
+<li>Graph4NLP Survey: <a href="">Graph4nlp survey</a>  </li>
+<li>Graph4NLP Tutorials: <a href="https://www.aclweb.org/anthology/2021.naacl-tutorials.3.pdf">Graph4NLP-NAACL'21</a>(Slides: <a href="https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view?usp=sharing">google drive</a>, <a href="https://pan.baidu.com/s/1QeWedhMgIBjBpK0EcgXYvQ">baidu netdisk</a>(drs1))  </li>
+<li>Graph4NLP Literature Review: <a href="https://github.com/graph4ai/graph4nlp_literature">Literature Lists</a>  </li>
+<li>Graph4NLP Workshops : <a href="https://deep-learning-graphs.bitbucket.io/dlg-kdd21/index.html">Workshops</a>  </li>
+</ul>
+<h2>Contributing</h2>
+<p>Please let us know if you encounter a bug or have any suggestions by filing an issue.</p>
+<p>We welcome all contributions from bug fixes to new features and extensions.</p>
+<p>We expect all contributions discussed in the issue tracker and going through PRs. </p>
+<h2>Citation</h2>
+<p>If you found this code useful, please consider citing the following paper (please stay tuned!).</p>
+<!-- Yu Chen, Lingfei Wu and Mohammed J. Zaki. **"Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust
+Node Embeddings."** In *Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS 2020), Dec
+6-12, 2020.*
+
+@article{chen2020iterative,
+title={Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust Node Embeddings},
+author={Chen, Yu and Wu, Lingfei and Zaki, Mohammed},
+journal={Advances in Neural Information Processing Systems},
+volume={33},
+year={2020}
+} -->
+
+<!-- Organizers -->
+<div class="border-top my-3"></div>
+<div class="row p-4" id="faq">
+  <div class="col-12 bd-content">
+    <h2 class="text-center">Team</h2>
+  </div>
+</div>
+<div class="row">
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Lingfei Wu</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            JD.COM Silicon Valley Research Center
+          </h6>
+        </div>
+        <center>
+          <img src="https://sites.google.com/a/email.wm.edu/teddy-lfwu/" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Yu Chen</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Facebook AI
+          </h6>
+        </div>
+        <center>
+          <img src="http://academic.hugochan.net/" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Kai Shen</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Zhejiang University
+          </h6>
+        </div>
+        <center>
+          <img src="https://scholar.google.com/citations?user=K91DJhIAAAAJ&amp;hl=en" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Xiaojie Guo</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            JD.COM Silicon Valley Research Center
+          </h6>
+        </div>
+        <center>
+          <img src="https://sites.google.com/view/xiaojie-guo-personal-site" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Hanning Gao</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            
+          </h6>
+        </div>
+        <center>
+          <img src="" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Shucheng Li</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            
+          </h6>
+        </div>
+        <center>
+          <img src="" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 col-xs-6">
+    <div class="pp-card">
+      <div class="pp-card-header" class="text-muted">
+        <h5 class="card-title" align="center">Saizhuo Wang</h5>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            Developer
+          </h6>
+        </div>
+        <div>
+          <h6 class="card-subtitle text-muted m-1" align="center">
+            
+          </h6>
+        </div>
+        <center>
+          <img src="" class="rounded" style="height: 150px;" />
+        </center>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+    </div>
+</div>
+
+
+
+<!-- Google Analytics -->
+<script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "UA-");
+</script>
+
+<!-- Footer -->
+<footer class="footer bg-light p-4">
+    <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2020 DLG4NLP Team</p>
+    </div>
+</footer>
+
+<!-- Code for hash tags -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    if (window.location.hash !== "") {
+      $(`a[href="${window.location.hash}"]`).tab("show");
+    }
+
+    $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+      const hash = $(e.target).attr("href");
+      if (hash.substr(0, 1) === "#") {
+        const position = $(window).scrollTop();
+        window.location.replace(`#${hash.substr(1)}`);
+        $(window).scrollTop(position);
+      }
+    });
+  });
+</script>
+<!--    <script src="static/js/modules/lazyLoad.js"></script>-->
+
+</body>
+</html>

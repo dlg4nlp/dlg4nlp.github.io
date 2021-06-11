@@ -1,8 +1,10 @@
-{% import 'components.html' as components %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
+    
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
     <meta
@@ -47,14 +49,7 @@
     <!--    Internal Libs -->
     <script src="static/js/data/api.js"></script>
 
-    {% if config.use_auth0 %}
-    <script>
-      var auth0_domain = "{{config.auth0_domain}}";
-      var auth0_client_id = "{{config.auth0_client_id}}";
-    </script>
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
-    <script src="static/js/modules/auth0protect.js"></script>
-    {% endif %}
+    
 
     <!-- External CSS -->
     <link rel="stylesheet"
@@ -78,25 +73,12 @@
     <link rel="stylesheet" href="static/css/lazy_load.css"/>
     <link rel="stylesheet" href="static/css/typeahead.css"/>
 
-    <title>{{config.page_title.prefix}}{% if page_title
-        %}{{config.page_title.separator}}{{page_title}}{% endif %}</title>
-    {% endblock %}
+    <title>DLG4NLP: Chat</title>
+    
 </head>
 
 <body>
 <!-- NAV -->
-{% block header %}
-{% set navigation_bar = [
-('index.html', 'Home'),
-('papers.html', 'Paper'),
-('workshops.html', 'Workshop'),
-('https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view
-', 'Tutorial'),
-('https://github.com/graph4ai/graph4nlp_demo', 'Demo'),
-('http://saizhuo.wang/g4nlp/index.html', 'Docs'),
-('https://github.com/graph4ai/graph4nlp', 'GitHub'),
-('blogs.html', 'Blog'),
-] -%}
 
 <nav
         class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto"
@@ -105,14 +87,12 @@
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img
-                    class="logo" src="{{config.logo.image}}"
-                    height={{config.logo.height | default("auto") | tojson}}
-            width={{config.logo.width | default("auto") | tojson}}
+                    class="logo" src="static/images/G4L-logo.png"
+                    height="auto"
+            width="200px"
             />
         </a>
-        {% if config.site_title %}
-        <a class="navbar-brand" href="index.html">{{config.site_title}}</a>
-        {% endif %}
+        
         <button
                 class="navbar-toggler"
                 type="button"
@@ -129,38 +109,90 @@
                 id="navbarNav"
         >
             <ul class="navbar-nav ml-auto">
-                {% for href, id in navigation_bar %}
-                <li class="nav-item {% if id == active_page %}active{% endif %}">
-                    <a class="nav-link" href="{{href}}">{{id}}</a>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
-                {% endfor %}
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="papers.html">Paper</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="workshops.html">Workshop</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view
+">Tutorial</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://github.com/graph4ai/graph4nlp_demo">Demo</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://saizhuo.wang/g4nlp/index.html">Docs</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://github.com/graph4ai/graph4nlp">GitHub</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="blogs.html">Blog</a>
+                </li>
+                
             </ul>
         </div>
     </div>
 </nav>
-{% endblock %}
 
-{% block body %}
-<!-- User Overrides -->
-{% block top %} {% endblock %}
 
-<div class="container">
-    <!-- Tabs -->
-    <div class="tabs">
-        {% block tabs %} {% endblock %}
-    </div>
-    <!-- Content -->
-    <div class="content">
-        {% block content %} {% endblock %}
-    </div>
+
+<div class="slp">
+  <iframe id="frame" width="100%" src=""> </iframe>
 </div>
-{% endblock %}
-{% block footer %}
+<script type="text/javascript">
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+    var results = regex.exec(location.search);
+    return results === null
+      ? ""
+      : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  $(document).ready(function () {
+    console.log("run");
+    var win_height;
+    var frm_height;
+    var oFrame = $("#frame");
+    console.log(oFrame);
+    // Get page height Firefox/IE
+    if (window.innerHeight) win_height = window.innerHeight;
+    else if (document.body.clientHeight)
+      win_height = document.body.clientHeight;
+
+    // Dtermine new height
+    frm_height = win_height - oFrame.offset().top - 15; // replace 15 accordingly
+
+    // Set iframe height
+    oFrame.attr("height", frm_height + "px");
+
+    oFrame.attr(
+      "src",
+      "https:///" + getUrlParameter("room")
+    );
+  });
+</script>
+
+
 
 <!-- Google Analytics -->
 <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id={{config.analytics}}"
+        src="https://www.googletagmanager.com/gtag/js?id=UA-"
 ></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -170,14 +202,14 @@
   }
 
   gtag("js", new Date());
-  gtag("config", "{{config.analytics}}");
+  gtag("config", "UA-");
 </script>
 
 <!-- Footer -->
 <footer class="footer bg-light p-4">
     <div class="container">
         <p class="float-right"><a href="#">Back to Top</a></p>
-        <p class="text-center">© 2020 {{config.organization}}</p>
+        <p class="text-center">© 2020 DLG4NLP Team</p>
     </div>
 </footer>
 
@@ -199,6 +231,6 @@
   });
 </script>
 <!--    <script src="static/js/modules/lazyLoad.js"></script>-->
-{% endblock %}
+
 </body>
 </html>

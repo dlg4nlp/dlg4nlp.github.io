@@ -1,4 +1,4 @@
-name: MiniConf
+name: DLG4NLP
 tagline: Deep Learning on Graphs for Natural Language Processing
 analytics: UA-
 logo:
@@ -8,7 +8,7 @@ logo:
 # uncomment the following line to show the site title next to the logo image
 # site_title: DLG4NLP
 page_title:
-  prefix: 'MiniConf 2020'
+  prefix: 'DLG4NLP'
   separator: ': '
 background_image: static/images/main.jpg
 organization: DLG4NLP Team

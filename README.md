@@ -9,7 +9,7 @@
 <b>Figure</b>: Graph4NLP Overall Architecture
 </p>
 
-## <img src="docs/new.png" alt='new' width=30 /> Graph4NLP news
+## <img src="static/images/new.png" alt='new' width=30 /> Graph4NLP news
 **06/05/2021:** The **v0.4.1 release**. Try it out!
 
 ## Quick tour
@@ -51,7 +51,7 @@ scores = graph2seq(batch_data["graph_data"], batch_data["tgt_seq"])  # [Batch_si
 
 Our Graph4NLP computing flow is shown as below.
 <p align="center">
-<img src="./imgs/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
+<img src="static/images/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
 <br/>
 </p>
 
