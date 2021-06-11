@@ -81,6 +81,14 @@ def home():
 #    data["FAQ"] = site_data["faq"]["FAQ"]
 #    return render_template("help.html", **data)
 
+@app.route("/team.html")
+def team():
+    data = _data()
+    data["readme"] = open("README.md").read()
+    data["team"] = site_data["team"]["team"]
+    return render_template("team.html", **data)
+
+
 
 @app.route("/papers.html")
 def papers():
