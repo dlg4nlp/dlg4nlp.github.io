@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./imgs/graph4nlp_logo.png" width="800" class="center" alt="logo"/>
+<img src="static/images/graph4nlp_logo.png" width="800" class="center" alt="logo"/>
     <br/>
 </p>
  
@@ -46,12 +46,12 @@
 **Natural Language Processing** (i.e., DLG4NLP). It provides both **full implementations** of state-of-the-art models for data scientists and also **flexible interfaces** to build customized models for researchers and developers with whole-pipeline support. Built upon highly-optimized runtime libraries including [DGL](https://github.com/dmlc/dgl) , ***Graph4NLP*** has both high running efficiency and great extensibility. The architecture of ***Graph4NLP*** is shown in the following figure, where boxes with dashed lines represents the features under development. Graph4NLP consists of four different layers: 1) Data Layer, 2) Module Layer, 3) Model Layer, and 4) Application Layer.
 
 <p align="center">
-    <img src="docs/arch.png" alt="architecture" width="700" />
+    <img src="static/images/arch.png" alt="architecture" width="700" />
     <br>
     <b>Figure</b>: Graph4NLP Overall Architecture
 </p>
 
-## <img src="docs/new.png" alt='new' width=30 /> Graph4NLP news
+## <img src="static/images/new.png" alt='new' width=30 /> Graph4NLP news
 **06/05/2021:** The **v0.4.1 release**. Try it out!
 
 ## Quick tour
@@ -93,7 +93,7 @@ scores = graph2seq(batch_data["graph_data"], batch_data["tgt_seq"])  # [Batch_si
 
 Our Graph4NLP computing flow is shown as below.
 <p align="center">
-<img src="./imgs/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
+<img src="static/images/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
     <br/>
 </p>
 
