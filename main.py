@@ -61,7 +61,7 @@ def index():
 
 @app.route("/favicon.ico")
 def favicon():
-    return send_from_directory(site_data_path, "favicon.ico")
+    return send_from_directory(site_data_path, "G4L.png")
 
 
 # TOP LEVEL PAGES
@@ -71,7 +71,7 @@ def favicon():
 def home():
     data = _data()
     data["readme"] = open("README.md").read()
-    data["committee"] = site_data["committee"]["committee"]
+    data["team"] = site_data["team"]["team"]
     return render_template("index.html", **data)
 
 

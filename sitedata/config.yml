@@ -2,21 +2,16 @@ name: MiniConf
 tagline: Deep Learning on Graphs for Natural Language Processing
 analytics: UA-
 logo:
-  image: static/images/MiniConf.png
-  width: 180px
+  image: static/images/G4L-logo.png
+  width: 200px
   height: auto
 # uncomment the following line to show the site title next to the logo image
-# site_title: MiniConf
+# site_title: DLG4NLP
 page_title:
   prefix: 'MiniConf 2020'
   separator: ': '
 background_image: static/images/main.jpg
-organization: MiniConf Organization Committee
-
-# Remove or change to your chat server.
-chat_server: miniconf.sloppy.zone
-default_presentation_id: 38922815
-default_poster_pdf: /static/images/GLTR_poster.pdf
+organization: DLG4NLP Team
 
 
 # Configuration for auth
