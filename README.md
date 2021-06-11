@@ -1,102 +1,218 @@
-## MiniConf
+# Graph4NLP
 
-<a href="https://mini-conf.github.io/index.html">MiniConf</a> is a virtual conference in a box. It manages the papers, schedules, and speakers for an academic conference run virtually. It can be easily integrated with interactive tools such as video, chat, and QA.
+***Graph4NLP*** is an easy-to-use library for R&D at the intersection of **Deep Learning on Graphs** and
+**Natural Language Processing** (i.e., DLG4NLP). It provides both **full implementations** of state-of-the-art models for data scientists and also **flexible interfaces** to build customized models for researchers and developers with whole-pipeline support. Built upon highly-optimized runtime libraries including [DGL](https://github.com/dmlc/dgl) , ***Graph4NLP*** has both high running efficiency and great extensibility. The architecture of ***Graph4NLP*** is shown in the following figure, where boxes with dashed lines represents the features under development. Graph4NLP consists of four different layers: 1) Data Layer, 2) Module Layer, 3) Model Layer, and 4) Application Layer.
 
-<img src="https://raw.githubusercontent.com/Mini-Conf/Mini-Conf/master/miniconf.gif">
+<p align="center">
+<img src="static/images/arch.png" alt="architecture" width="700" />
+<br>
+<b>Figure</b>: Graph4NLP Overall Architecture
+</p>
 
-MiniConf was originally built to host <a href="https://iclr.cc/virtual_2020">ICLR 2020</a> a virtual conference with 6000 participants and have been used to host a wide variety of major conferences.
+## <img src="docs/new.png" alt='new' width=30 /> Graph4NLP news
+**06/05/2021:** The **v0.4.1 release**. Try it out!
 
-* AAAI 2021 
-* [ACMC 2020 (Australian Computer Music Conference)](https://acmc2020.com/index.html)
-* [ACM-CHIL 2020 (Conference on Health, Inference, and Learning)](https://www.chilconference.org/)
-* [ACL 2020 (Association of Computational Linguistics)](https://virtual.acl2020.org/index.html)
-* [AIStats 2020](https://aistats2020.net/)
-* [AKBC 2020 (Automated Knowledge Base Construction)](https://akbc.apps.allenai.org/index.html)
-* [EMNLP 2020 (Empirical Methods in NLP)](https://virtual.2020.emnlp.org/index.html)
-* [ICLR 2020 (International Conference on Learning Representations)](https://iclr.cc/virtual_2020)
-* [ICML 2020 (International Conference on Machine Learning)](https://icml.cc/virtual/2020/index.html)
-* [IEEE VIS 2020 (IEEE conference on Visualization and Visual Analytics)](https://virtual.ieeevis.org/)
-* [NeurIPS 2020 (Neural Information Processing Systems Conference)](https://neurips.cc/virtual/2020/public/)
-* [SIGIR 2020 (Information Retrieval)](https://sigir-schedule.baai.ac.cn/papers)
-* [Data Science Capstone Exhibition, University of Pretoria](https://up-mitc-ds.github.io/808exhibition2020/index.html)
+## Quick tour
 
-It is designed to be:
+***Graph4nlp*** aims to make it incredibly easy to use GNNs in NLP tasks (check out [Graph4NLP Documentation](http://saizhuo.wang/g4nlp/index.html)). Here is an example of how to use the [*Graph2seq*](http://saizhuo.wang/g4nlp/index.html) model (widely used in machine translation, question answering,
+semantic parsing, and various other NLP tasks that can be abstracted as graph-to-sequence problem and has shown superior
+performance).
 
-* Run based on static files hosted by any server. 
-* Modifiable without a database using CSV files.
-* Easy to extend to fit any backend or additional frontend tools. 
+<!-- If you want to further improve model performance, we also support pre-trained models including [BERT](https://arxiv.org/abs/1810.04805), etc.
+-->
+We also offer other high-level model APIs such as graph-to-tree models. If you are interested in DLG4NLP related research problems, you are very welcome to use our library and refer to our [graph4nlp survey](to_be_add).
 
-## Links
-Demo system: <a href='http://www.mini-conf.org'> http://www.mini-conf.org</a>
+```python
+from graph4nlp.pytorch.datasets.jobs import JobsDataset
+from graph4nlp.pytorch.modules.graph_construction.dependency_graph_construction import DependencyBasedGraphConstruction
+from graph4nlp.pytorch.modules.config import get_basic_args
+from graph4nlp.pytorch.models.graph2seq import Graph2Seq
+from graph4nlp.pytorch.modules.utils.config_utils import update_values, get_yaml_config
 
-Source Code: <a href='https://github.com/Mini-Conf/Mini-Conf'> https://github.com/Mini-Conf/Mini-Conf</a>
+# build dataset
+jobs_dataset = JobsDataset(root_dir='graph4nlp/pytorch/test/dataset/jobs',
+topology_builder=DependencyBasedGraphConstruction,
+topology_subdir='DependencyGraph')  # You should run stanfordcorenlp at background
+vocab_model = jobs_dataset.vocab_model
 
-## Get Started
+# build model
+user_args = get_yaml_config("examples/pytorch/semantic_parsing/graph2seq/config/dependency_gcn_bi_sep_demo.yaml")
+args = get_basic_args(graph_construction_name="node_emb", graph_embedding_name="gat", decoder_name="stdrnn")
+update_values(to_args=args, from_args_list=[user_args])
+graph2seq = Graph2Seq.from_args(args, vocab_model)
 
-<pre>
-> pip install -r requirements.txt
-> make run
-</pre>
+# calculation
+batch_data = JobsDataset.collate_fn(jobs_dataset.train[0:12])
 
-When you are ready to deploy run `make freeze` to get a static version of the site in the `build` folder. 
-
-
-### Tour
-
-The <a href="https://github.com/Mini-Conf/Mini-Conf">MiniConf</a> repo:
-
-1) *Datastore* <a href="https://github.com/Mini-Conf/Mini-Conf/tree/master/sitedata">`sitedata/`</a>
-
-Collection of CSV files representing the papers, speakers, workshops, and other important information for the conference.
-
-2) *Routing* <a href="https://github.com/Mini-Conf/Mini-Conf/tree/master/main.py">`main.py`</a>
-
-One file flask-server handles simple data preprocessing and site navigation. 
-
-3) *Templates* <a href="https://github.com/Mini-Conf/Mini-Conf/tree/master/templates">`templates/`</a>
-
-Contains all the pages for the site. See `base.html` for the master page and `components.html` for core components.
-
-4) *Frontend* <a href="https://github.com/Mini-Conf/Mini-Conf/tree/master/static">`static/`</a>
-
-Contains frontend components like the default css, images, and javascript libs.
-
-5) *Scripts* <a href="https://github.com/Mini-Conf/Mini-Conf/tree/master/scripts">`scripts/`</a>
-
-Contains additional preprocessing to add visualizations, recommendations, schedules to the conference. 
-
-6) For importing calendars as schedule see [scripts/README_Schedule.md](https://github.com/Mini-Conf/Mini-Conf/blob/master/scripts/README_Schedule.md)
-
-### Extensions
-
-MiniConf is designed to be a completely static solution. However it is designed to integrate well with dynamic third-party solutions. We directly support the following providers: 
-
-* Rocket.Chat: The `chat/` directory contains descriptions for setting up a hosted Rocket.Chat instance and for embedding chat rooms on individual paper pages. You can either buy a hosted setting from Rocket.chat or we include instructions for running your own scalable instance through sloppy.io. 
-
-* Auth0 : The code can integrate through Auth0.com to provide both page login (through javascript gating) and OAuth SSO with Rocket Chat. The documentation on Auth0 is very easy to follow, you simply need to create an Application for both the MiniConf site and the Rocket.Chat server. You then enter in the Client keys to the appropriate configs. 
-
-* SlidesLive: It is easy to embedded any video provider -> YouTube, Vimeo, etc. However we have had great experience with SlidesLive and recommend them as a host. We include a slideslive example on the main page. 
-
-* PDF.js: For conferences that use posters it is easy to include an embedded pdf on poster pages. An example is given. 
-
-
-### Acknowledgements
-
-MiniConf was built by [Hendrik Strobelt](http://twitter.com/hen_str) and [Sasha Rush](http://twitter.com/srush_nlp).
-
-Thanks to Darren Nelson for the original design sketches. Shakir Mohamed, Martha White, Kyunghyun Cho, Lee Campbell, and Adam White for planning and feedback. Hao Fang, Junaid Rahim, Jake Tae, Yasser Souri, Soumya Chatterjee, and Ankshita Gupta for contributions. 
-
-### Citation
-Feel free to cite MiniConf:
-```bibtex
-@misc{RushStrobelt2020,
-    title={MiniConf -- A Virtual Conference Framework},
-    author={Alexander M. Rush and Hendrik Strobelt},
-    year={2020},
-    eprint={2007.12238},
-    archivePrefix={arXiv},
-    primaryClass={cs.HC}
-}
+scores = graph2seq(batch_data["graph_data"], batch_data["tgt_seq"])  # [Batch_size, seq_len, Vocab_size]
 ```
+
+## Overview
+
+Our Graph4NLP computing flow is shown as below.
+<p align="center">
+<img src="./imgs/graph4nlp_flow.png" width="1000" class="center" alt="logo"/>
+<br/>
+</p>
+
+## Graph4NLP Models and Applications
+
+### Graph4NLP models
+
+- [Graph2Seq](https://github.com/graph4ai/graph4nlp/blob/master/graph4nlp/pytorch/models/graph2seq.py): a general end-to-end neural encoder-decoder model that maps an input graph to a sequence of tokens.  
+- [Graph2Tree](https://github.com/graph4ai/graph4nlp/blob/master/graph4nlp/pytorch/models/graph2tree.py): a general end-to-end neural encoder-decoder model that maps an input graph to a tree structure.
+
+### Graph4NLP applications
+
+We provide a comprehensive collection of NLP applications, together with detailed examples as follows:
+
+- [Text classification](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/text_classification): to give the sentence or document an appropriate label.
+- [Semantic parsing](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/semantic_parsing): to translate natural language into a machine-interpretable formal meaning representation.
+- [Neural machine translation](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/nmt): to translate a sentence in a source language to a different target language.
+- [summarization](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/summarization): to generate a shorter version of input texts which could preserve major meaning.
+- [KG completion](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/kg_completion): to predict missing relations between two existing entities in konwledge graphs.
+- [Math word problem solving](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/math_word_problem): to automatically solve mathematical exercises that provide background information about a problem in easy-to-understand language.
+- [Name entity recognition](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/name_entity_recognition): to tag entities in input texts with their corresponding type.
+- [Question generation](https://github.com/graph4ai/graph4nlp/tree/master/examples/pytorch/question_generation): to generate an valid and fluent question based on the given passage and target answer (optional).
+
+
+## Performance
+
+| Task                       |              Dataset             |   GNN    Model      | Graph construction                           | Evaluation         |          Performance          |
+|----------------------------|:--------------------------------:|:-------------------:|----------------------------------------------|--------------------|:-----------------------------:|
+| Text classification        | TRECT<br> CAirline<br> CNSST<br> |           GAT       | Dependency                                   |        Accuracy    | 0.948<br> 0.769<br> 0.538<br> |
+| Semantic Parsing           |               JOBS               |           SAGE      | Constituency                                 | Execution accuracy |             0.936             |
+| Question generation        |               SQuAD             |           GGNN       | Dependency                                      | BLEU-4             |             0.15175                |
+| Machine translation        |              IWSLT14             |           GCN       | Dynamic                                      | BLEU-4             |             0.3212            |
+| Summarization              |             CNN(30k)             |           GCN       | Dependency                                   | ROUGE-1            |              26.4             |
+| Knowledge graph completion | Kinship                          |           GCN      | Dependency                                    | MRR                | 82.4                          |
+| Math word problem          | MAWPS  <br> MATHQA               | SAGE                | Dynamic                                      | Solution accuracy <br> Exact match  | 76.4<br>  61.07  |
+
+## Installation
+
+Currently, users can install Graph4NLP via **pip** or **source code**. Graph4NLP supports the following OSes:
+
+- Linux-based systems (tested on Ubuntu 18.04 and later)
+- macOS (only CPU version)
+- Windows 10 (only support pytorch >= 1.8)
+
+### Installation via pip (binaries)
+We provide pip wheels for all major OS/PyTorch/CUDA combinations. Note that we highly recommend `Windows` users refer to `Installation via source code` due to compatibility.
+
+#### Ensure that at least PyTorch (>=1.6.0) is installed:
+Note that `>=1.6.0` is ok.
+``` bash
+$ python -c "import torch; print(torch.__version__)"
+>>> 1.6.0
+```
+#### Find the CUDA version PyTorch was installed with (for GPU users):
+```bash
+$ python -c "import torch; print(torch.version.cuda)"
+>>> 10.2
+```
+
+#### Install the relevant dependencies:
+`torchtext` is needed since Graph4NLP relies on it to implement embeddings.
+Please pay attention to the PyTorch requirements before installing `torchtext` with the following script! For detailed version matching please refer [here](https://pypi.org/project/torchtext/).
+``` bash
+pip install torchtext # >=0.7.0
+```
+
+
+#### Install Graph4NLP
+```bash
+pip install graph4nlp${CUDA}
+```
+where `${CUDA}` should be replaced by the specific CUDA version (`none` (CPU version), `"-cu92"`, `"-cu101"`, `"-cu102"`, `"-cu110"`). The following table shows the concrete command lines. For CUDA 11.1 users, please refer to `Installation via source code`.
+
+| Platform  | Command                       |
+| --------- | ----------------------------- |
+| CPU       | `pip install graph4nlp`   |
+| CUDA 9.2  | `pip install graph4nlp-cu92`  |
+| CUDA 10.1 | `pip install graph4nlp-cu101` |
+| CUDA 10.2 | `pip install graph4nlp-cu102` |
+| CUDA 11.0 | `pip install graph4nlp-cu110` |
+
+### Installation via source code
+
+#### Ensure that at least PyTorch (>=1.6.0) is installed:
+Note that `>=1.6.0` is ok.
+``` bash
+$ python -c "import torch; print(torch.__version__)"
+>>> 1.6.0
+```
+#### Find the CUDA version PyTorch was installed with (for GPU users):
+```bash
+$ python -c "import torch; print(torch.version.cuda)"
+>>> 10.2
+```
+
+#### Install the relevant dependencies:
+`torchtext` is needed since Graph4NLP relies on it to implement embeddings.
+Please pay attention to the PyTorch requirements before installing `torchtext` with the following script! For detailed version matching please refer [here](https://pypi.org/project/torchtext/).
+``` bash
+pip install torchtext # >=0.7.0
+```
+
+#### Download the source code of `Graph4NLP` from Github:
+```bash
+git clone https://github.com/graph4ai/graph4nlp.git
+cd graph4nlp
+```
+#### Configure the CUDA version
+Then run `./configure` (or `./configure.bat`  if you are using Windows 10) to config your installation. The configuration program will ask you to specify your CUDA version. If you do not have a GPU, please type 'cpu'.
+```bash
+./configure
+```
+
+#### Install the relevant packages:
+
+Finally, install the package:
+
+```shell
+python setup.py install
+```
+
+## Major Releases
+
+| Releases | Date       | Features                                                     |
+| -------- | ---------- | ------------------------------------------------------------ |
+| v0.4.1   | 2021-06-05 | - Support the whole pipeline of Graph4NLP<br />- GraphData and Dataset support |
+
+## New to Deep Learning on Graphs for NLP?
+
+If you want to learn more on applying Deep Learning on Graphs techniques to NLP tasks, you can refer to our survey paper which provides an overview of this existing research direction. If you want detailed reference to our library, please refer to our docs.
+
+<!-- [Docs]() | [Graph4nlp survey]() | [Related paper list]() | [Workshops]() -->
+- Documentation: [Docs](http://saizhuo.wang/g4nlp/index.html)  
+- Graph4NLP Survey: [Graph4nlp survey]()  
+- Graph4NLP Tutorials: [Graph4NLP-NAACL'21](https://www.aclweb.org/anthology/2021.naacl-tutorials.3.pdf)(Slides: [google drive](https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view?usp=sharing), [baidu netdisk](https://pan.baidu.com/s/1QeWedhMgIBjBpK0EcgXYvQ)(drs1))  
+- Graph4NLP Literature Review: [Literature Lists](https://github.com/graph4ai/graph4nlp_literature )  
+- Graph4NLP Workshops : [Workshops](https://deep-learning-graphs.bitbucket.io/dlg-kdd21/index.html)  
+
+
+## Contributing
+
+Please let us know if you encounter a bug or have any suggestions by filing an issue.
+
+We welcome all contributions from bug fixes to new features and extensions.
+
+We expect all contributions discussed in the issue tracker and going through PRs. 
+
+## Citation
+
+If you found this code useful, please consider citing the following paper (please stay tuned!).
+
+<!-- Yu Chen, Lingfei Wu and Mohammed J. Zaki. **"Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust
+Node Embeddings."** In *Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS 2020), Dec
+6-12, 2020.*
+
+@article{chen2020iterative,
+title={Iterative Deep Graph Learning for Graph Neural Networks: Better and Robust Node Embeddings},
+author={Chen, Yu and Wu, Lingfei and Zaki, Mohammed},
+journal={Advances in Neural Information Processing Systems},
+volume={33},
+year={2020}
+} -->
 
 

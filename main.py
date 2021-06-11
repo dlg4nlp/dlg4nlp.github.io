@@ -84,9 +84,20 @@ def home():
 
 @app.route("/papers.html")
 def papers():
+#    data = _data()
+#    data["papers"] = site_data["papers"]
+#    return render_template("papers.html", **data)
     data = _data()
-    data["papers"] = site_data["papers"]
-    return render_template("papers.html", **data)
+    data["readme"] = open("README.md").read()
+    data["team"] = site_data["team"]["team"]
+    return render_template("index.html", **data)
+
+@app.route("/blogs.html")
+def blogs():
+    data = _data()
+    data["readme"] = open("README.md").read()
+    data["team"] = site_data["team"]["team"]
+    return render_template("index.html", **data)
 
 
 @app.route("/paper_vis.html")
@@ -109,11 +120,15 @@ def schedule():
 
 @app.route("/workshops.html")
 def workshops():
+#    data = _data()
+#    data["workshops"] = [
+#        format_workshop(workshop) for workshop in site_data["workshops"]
+#    ]
+#    return render_template("workshops.html", **data)
     data = _data()
-    data["workshops"] = [
-        format_workshop(workshop) for workshop in site_data["workshops"]
-    ]
-    return render_template("workshops.html", **data)
+    data["readme"] = open("README.md").read()
+    data["team"] = site_data["team"]["team"]
+    return render_template("index.html", **data)
 
 
 def extract_list_field(v, key):
