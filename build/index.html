@@ -105,15 +105,15 @@
     >
       <div class="container">
         <a class="navbar-brand" href="index.html">
-<!--          <img-->
-<!--             class="logo" src="static/images/G4L-logo.png"-->
-<!--             height="auto"-->
-<!--             width="200px"-->
-<!--          />-->
+          <img
+             class="logo" src="static/images/graph4nlp_logo.png"
+             height="auto"
+             width="200px"
+          />
         </a>
-        
-        <a class="navbar-brand" href="index.html">DLG4NLP@2021</a>
-        
+<!--        -->
+<!--        <a class="navbar-brand" href="index.html">DLG4NLP@2021</a>-->
+<!--        -->
         <button
           class="navbar-toggler"
           type="button"
@@ -144,7 +144,43 @@
               
                 <li class="nav-item ">
                   
-                  <a class="nav-link" href="https://github.com/graph4ai/graph4nlp" target="_blank">Paper</a>
+                  <a class="nav-link" href="https://github.com/graph4ai/graph4nlp_demo" target="_blank">Demos</a>
+                  
+                </li>
+              
+            
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="tutorials.html">Tutorials</a>
+                  
+                </li>
+              
+            
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="https://github.com/graph4ai/graph4nlp" target="_blank">Docs</a>
+                  
+                </li>
+              
+            
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="https://arxiv.org/abs/2106.06090" target="_blank">Survey</a>
+                  
+                </li>
+              
+            
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="https://github.com/graph4ai/graph4nlp_literature" target="_blank">Publications</a>
                   
                 </li>
               
@@ -155,37 +191,6 @@
                   
                   <a class="nav-link" href="https://github.com/graph4ai/graph4nlp" target="_blank">GitHub</a>
                   
-                </li>
-              
-            
-            
-              
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"
-                        href="https://github.com/graph4ai/graph4nlp" target="_blank" id="chatNavbarDropdown" role="button"
-                        data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Resources
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="IENavbarDropdown">
-                        <a class="dropdown-item" href="index.html">
-                            Demos
-                        </a>
-                        <a class="dropdown-item" href="index.html">
-                            Workshops
-                        </a>
-                        <a class="dropdown-item" href="index.html">
-                            Tutorials
-                        </a>
-                        <a class="dropdown-item" href="index.html">
-                            Slides
-                        </a>
-                        <a class="dropdown-item" href="index.html">
-                            Videos
-                        </a>
-                        <a class="dropdown-item" href="index.html">
-                            Blogs
-                        </a>
-                    </div>
                 </li>
               
             
@@ -249,7 +254,7 @@
 <div class="jumbotron jumbotron-fluid back" style="padding-bottom: 5px;">
   <div class="row header p-6 m-5">
     <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
-      <h3 class="p-2" style="font-size:2vw">
+      <h3 class="p-2" style="font-size:4vw">
         <b>Deep Learning on Graphs for Natural Language Processing</b><br>
       </h3>
       <h3>
@@ -273,33 +278,59 @@
 
 <div class="pp-card m-3" style="">
     <div class="card-header">
-        <h2>
-            About
-        </h2>
+        
+        <h4>
+            <b>A powerful and flexible deep graph learning library for natural language processing</b>
+        </h4>
         
         <p>
-        Deep learning has become the dominant approach in coping with various tasks in Natural Language Processing (NLP) today, especially when operated on large-scale text corpora. Conventionally, text sequences are considered as a bag of tokens such as BoW and TF-IDF in NLP tasks. With recent success of Word Embeddings techniques (Mikolov et al., 2013; Pennington et al., 2014), sentences are typically represented as a sequence of tokens in NLP tasks. Hence, popular deep learning techniques such as recurrent neural networks (Schuster and Paliwal, 1997) and convolutional neural networks (Krizhevsky et al., 2012) have been widely applied for modeling text sequence.
+        Graph4NLP is an easy-to-use library for R&D at the intersection of Deep Learning on Graphs and Natural Language Processing (i.e., DLG4NLP). It provides both full implementations of state-of-the-art models for data scientists and also flexible interfaces to build customized models for researchers and developers with whole-pipeline support. Built upon highly-optimized runtime libraries including DGL , Graph4NLP has both high running efficiency and great extensibility.
         </p>
-        <p>
-        However, there is a rich variety of NLP problems that can be best expressed with a graph structure. For instance, the sentence structural information in text sequence (i.e. syntactic parsing trees like dependency and constituency parsing trees) can be exploited to augment original sequence data by incorporating the task-specific knowledge. Similarly, the semantic information in sequence data (i.e. semantic parsing graphs like Abstract Meaning Representation graphs and Information Extraction graphs) can be leveraged to enhance original sequence data as well. Therefore, these graphstructured data can encode complicated pairwise relationships between entity tokens for learning more informative representations.
-        </p>
-        <p>
-        Unfortunately, deep learning techniques that were disruptive for Euclidean data (e.g, images) or sequence data (e.g, text) are not immediately applicable to graph-structured data, due to the complexity of graph data such as irregular structure and varying size of node neighbors. As a result, this gap has driven a tide in research for deep learning on graphs, especially in development of graph neural networks (GNNs) (Kipf and Welling, 2016; Defferrard et al., 2016; Hamilton et al., 2017a).
-        </p>
-        <p>
-        This wave of research at the intersection of deep learning on graphs and NLP has influenced a variety of NLP tasks. There has seen a surge of interests in applying and developing different GNNs variants and achieved considerable success in many NLP tasks, ranging from classification tasks like sentence classification (Henaff et al., 2015; Huang and Carley, 2019), semantic role labeling Luo and Zhao (2020); Gui et al. (2019), and relation extraction (Qu et al., 2020; Sahu et al., 2019), to generation tasks like machine translation (Bastings et al., 2017; Beck et al., 2018), question generation (Pan et al., 2020; Sachan et al., 2020), and summarization (Fernandes et al., 2019; Yasunaga et al., 2017). Despite the successes these existing research has achieved, deep learning on graphs for NLP still encounters many challenges, namely,
-        </p>
-        <ui>
-        <li>
-        Automatically transforming original text sequence data into highly graph-structured data. Such challenge is profound in NLP since most of the NLP tasks involving using the text sequences as the original inputs. Automatic graph construction from the text sequence to utilize the underlying structural information is a crucial step in utilizing graph neural networks for NLP problems.
-        </li>
-        <li>
-        Properly determining graph representation learning techniques. It is critical to come up with specially-designed GNNs to learn the unique characteristics of different graph-structures data such as undirected, directed, multi-relational and heterogeneous graphs.
-        </li>
-        <li>
-        Effectively modeling complex data. Such challenge is important since many NLP tasks involve learning the mapping between the graph-based inputs and other highly structured output data such as sequences, trees, as well as graph data with multi-types in both nodes and edges.
-        </li>
-        </p>
+        
+        <div class="pp-card m-2" style="">
+        <div class="card-header">
+        <code>$ pip install graph4nlp         </code>
+        <button class="button" data-clipboard-text="pip install graph4nlp">Copy</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+        <script>
+        new ClipboardJS(".button");
+        </script>
+        </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="pp-card m-3" style="">
+    <div class="card-header">
+        <h4>
+            <b>Key Features</b>
+        </h4>
+        <h5>
+            View All Features [<a href="https://github.com/graph4ai/graph4nlp_demo">link</a>]
+        </h5>
+</div>
+    </div>
+
+<div class="pp-card m-3" style="">
+    <div class="card-header">
+        <h4>
+            <b>Examples for Various Natural Language Processing Tasks</b>
+        </h4>
+        <h5>
+            Text Classification [<a href="https://graph4ai.github.io/graph4nlp/tutorial/text_classification.html">link</a>]
+        </h5>
+        <h5>
+            Semantic Parsing [<a href="https://graph4ai.github.io/graph4nlp/tutorial/semantic_parsing.html">link</a>]
+        </h5>
+        <h5>
+            Math Word Problem [<a href="https://graph4ai.github.io/graph4nlp/tutorial/math_word_problem.html">link</a>]
+        </h5>
+        <h5>
+            Knowledge Graph Completion [<a href="https://graph4ai.github.io/graph4nlp/tutorial/knowledge_graph_completion.html">link</a>]
+        </h5>
+    </div>
+</div>
     </div>
 </div>
 
@@ -337,7 +368,7 @@
     <footer class="footer bg-light p-4">
       <div class="container">
         <p class="float-left">
-<!--          <img src="static/images/G4L-logo.png"-->
+<!--          <img src="static/images/graph4nlp_logo.png"-->
 <!--            height="auto"-->
 <!--            width="200px" align="center"-->
 <!--          >-->

@@ -263,15 +263,11 @@ def teams():
 #    return render_template("posters.html", **data)
 #
 #
-#@app.route("/tutorials.html")
-#def tutorials():
-#    data = _data()
-#    data["tutorials"] = site_data["tutorials"]
-#    data["part1"] = site_data["part1"]
-#    data["part2"] = site_data["part2"]
-#    data["part3"] = site_data["part3"]
-#    data["part4"] = site_data["part4"]
-#    return render_template("tutorials.html", **data)
+@app.route("/tutorials.html")
+def tutorials():
+    data = _data()
+    data["tutorials"] = site_data["tutorials"]
+    return render_template("tutorials.html", **data)
 #
 #@app.route("/workshops.html")
 #def workshops():
@@ -339,11 +335,11 @@ def teams():
 #    data["plenary_session"] = by_uid["plenary_sessions"]['opening_remarks_speaker_by_tuomas_sandholm']
 #    return render_template("plenary_session.html", **data)
 
-#@app.route("/gnnbook_<uid>.html")
-#def tutorial(uid):
-#    data = _data()
-#    data["tutorial"] = by_uid["tutorials"][uid]
-#    return render_template("tutorial.html", **data)
+@app.route("/tutorial_<uid>.html")
+def tutorial(uid):
+    data = _data()
+    data["tutorial"] = by_uid["tutorials"][uid]
+    return render_template("tutorial.html", **data)
 
 #@app.route("/fh_<uid>.html")
 #def faculty_highlights(uid):
@@ -456,8 +452,8 @@ def generator():
 #        for plenary_session in plenary_sessions_on_date:
 #            yield "plenary_session", {"uid": plenary_session.id}
     tutorial: Tutorial
-#    for tutorial in site_data["tutorials"]:
-#        yield "tutorial", {"uid": tutorial.id}
+    for tutorial in site_data["tutorials"]:
+        yield "tutorial", {"uid": tutorial.id}
 #    for tutorial in site_data["part1"]:
 #        yield "tutorial", {"uid": tutorial.id}
 #    for tutorial in site_data["part2"]:

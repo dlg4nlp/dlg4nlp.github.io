@@ -21,7 +21,7 @@ teams:
   pweb: https://sites.google.com/view/xiaojie-guo-personal-site
 - role: Developer
   name: Hanning Gao
-  image:
+  image: static/images/hanning.jpeg
   aff: Tongji University
   pweb: /
 - role: Developer
@@ -31,7 +31,7 @@ teams:
   pweb: /
 - role: Developer
   name: Saizhuo Wang
-  image:
+  image: static/images/saizhuo.jpeg
   aff: HKUST
   pweb: /
 - role: Web Developer

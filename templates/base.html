@@ -91,9 +91,12 @@
     {% block header %}
     {% set navigation_bar = [
     ('index.html', 'Home'),
-    ('https://github.com/graph4ai/graph4nlp', 'Paper'),
+    ('https://github.com/graph4ai/graph4nlp_demo', 'Demos'),
+    ('tutorials.html', 'Tutorials'),
+    ('https://github.com/graph4ai/graph4nlp', 'Docs'),
+    ('https://arxiv.org/abs/2106.06090', 'Survey'),
+    ('https://github.com/graph4ai/graph4nlp_literature', 'Publications'),
     ('https://github.com/graph4ai/graph4nlp','GitHub'),
-    ('https://github.com/graph4ai/graph4nlp','Resources'),
     ('teams.html','Team')
     ] -%}
 <!--    ('index.html','Blog'),-->
@@ -111,15 +114,15 @@
     >
       <div class="container">
         <a class="navbar-brand" href="index.html">
-<!--          <img-->
-<!--             class="logo" src="{{config.logo.image}}"-->
-<!--             height={{config.logo.height | default("auto") | tojson}}-->
-<!--             width={{config.logo.width | default("auto") | tojson}}-->
-<!--          />-->
+          <img
+             class="logo" src="{{config.logo.image}}"
+             height={{config.logo.height | default("auto") | tojson}}
+             width={{config.logo.width | default("auto") | tojson}}
+          />
         </a>
-        {% if config.site_title %}
-        <a class="navbar-brand" href="index.html">{{config.site_title}}</a>
-        {% endif %}
+<!--        {% if config.site_title %}-->
+<!--        <a class="navbar-brand" href="index.html">{{config.site_title}}</a>-->
+<!--        {% endif %}-->
         <button
           class="navbar-toggler"
           type="button"

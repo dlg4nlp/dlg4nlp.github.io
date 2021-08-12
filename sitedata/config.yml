@@ -3,7 +3,7 @@ tagline: Deep Learning on Graphs for Natural Language Processing
 # subtitle: Natural Language Processing
 proceedings_title: Deep Learning on Graphs for Natural Language Processing
 logo:
-    image: static/images/G4L-logo.png
+    image: static/images/graph4nlp_logo.png
     width: 200px
     height: auto
 citation_date: February 2021
