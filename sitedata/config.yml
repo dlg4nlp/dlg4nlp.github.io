@@ -1,31 +1,35 @@
-name: DLG4NLP
+name: DLG4NLP@2021
 tagline: Deep Learning on Graphs for Natural Language Processing
-analytics: UA-
+# subtitle: Natural Language Processing
+proceedings_title: Deep Learning on Graphs for Natural Language Processing
 logo:
-  image: static/images/G4L-logo.png
-  width: 200px
-  height: auto
-# uncomment the following line to show the site title next to the logo image
-# site_title: DLG4NLP
+    image: static/images/G4L-logo.png
+    width: 200px
+    height: auto
+citation_date: February 2021
+analytics: UA-179777566-1
+site_url: https://aaai.org/Conferences/AAAI-21/
+site_title: DLG4NLP@2021
 page_title:
-  prefix: 'DLG4NLP'
+  prefix: 'DLG4NLP@2021'
   separator: ': '
-background_image: static/images/main.jpg
-organization: DLG4NLP Team
+background_image: static/images/background.jpg
+organization: DLG4NLP@2021 Team
 
+# Path to the folder of paper images.
+paper_images_path: static/images/papers
 
-# Configuration for auth
-#Test user
-#user: miniconf@miniconf.com
-#pass: mIniconf1_
+default_presentation_id: 38931484
 
-use_auth0:
-auth0_client_id : JIdr6wi0z27LyLgwkJF0fpk700aj7MNH
-auth0_domain : miniconf.auth0.com
+# Remove or change to your chat server.
+chat_server: aaai-21.rocket.chat
+channels_stats_server: https://emnlp2020-channels-stats.azure-api.net
+
+gather_town: https://www.virtualchair.net/events/emnlp2020
+connected_papers_conference_name: AAAI2021
 
 calendar:
-  colors: #  Colors for the different event hashtags:
-    ---: '#bed972'
-    qa: '#4FCAEB'
-    talk: '#ccc'
-  sunday_saturday: false  #  Include Sunday and Saturday
+  start: '2021-02-02 00:00:00-08:00'
+  end: '2021-02-09 23:59:59-08:00'
+#  start: '2021-2-2'
+#    end: '2021-2-9'

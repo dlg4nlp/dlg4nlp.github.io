@@ -1,0 +1,41 @@
+teams:
+- aff: JD.COM Silicon Valley Research Center
+  image: static/images/lingfei.jpeg
+  name: Lingfei Wu
+  role: Leader
+  pweb: https://sites.google.com/a/email.wm.edu/teddy-lfwu/
+- role: Developer
+  name: Yu Chen
+  aff: Facebook AI
+  image: static/images/yuchen.jpeg
+  pweb: http://academic.hugochan.net/
+- role: Developer
+  name: Kai Shen
+  aff: Zhejiang University
+  image: static/images/shenkai.jpeg
+  pweb: https://scholar.google.com/citations?user=K91DJhIAAAAJ&hl=en
+- role: Developer
+  name: Xiaojie Guo
+  aff: JD.COM Silicon Valley Research Center
+  image: static/images/xiaojie.jpeg
+  pweb: https://sites.google.com/view/xiaojie-guo-personal-site
+- role: Developer
+  name: Hanning Gao
+  image:
+  aff: Tongji University
+  pweb: /
+- role: Developer
+  name: Shucheng Li
+  aff: Nanjing University
+  image:
+  pweb: /
+- role: Developer
+  name: Saizhuo Wang
+  image:
+  aff: HKUST
+  pweb: /
+- role: Web Developer
+  name: Yuanqi Du
+  aff: George Mason University
+  image: static/images/yuanqi.jpeg
+  pweb: https://yuanqidu.github.io/

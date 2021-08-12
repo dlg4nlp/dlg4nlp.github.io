@@ -11,36 +11,89 @@
     font-family: "Lato", sans-serif;
     font-weight: 900;
   }
+  .page__hero-caption {
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 2px 10px;
+    color: #fff;
+    font-family: Georgia,Times,serif;
+    font-size: 0.9em;
+    text-align: right;
+    z-index: 5;
+    opacity: 0.5;
+    border-radius: 4px 0 0 0;
+  }
+    .ctagcloud li {
+        display:inline-block;
+        text-transform:uppercase;
+        font-size:1rem;
+        font-weight:600;
+        margin:4px;
+        padding:8px 16px;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        border-radius:3px;
+        background:rgba(0,0,0,0.05);
+        -webkit-transition:all 0.2s ease-in-out;
+        -moz-transition:all 0.2s ease-in-out;
+        transition:all 0.2s ease-in-out
+    }
 </style>
 
-<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 5px;">
   <div class="row header p-6 m-5">
     <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
-      <h2>
-        {{config.tagline|safe}}
-      </h2>
+      <h3 class="p-2" style="font-size:2vw">
+        <b>{{config.tagline|safe}}</b><br>
+      </h3>
+      <h3>
+          {{config.subtitle|safe}}<br>
+      </h3>
+<!--      <h5>-->
+<!--        <br>-->
+<!--        Deep Learning on Graphs for Natural Language Processing-->
+<!--      </h5>-->
     </div>
   </div>
+{#  <div class="page__hero-caption">Image Credit: NASA</div>#}
 </div>
-{% endblock %}
-
-{% block content %}
-
-<h1>About</h1>
-Deep learning has become the dominant approach in coping with various tasks in Natural Language Processing (NLP) today, especially when operated on large-scale text corpora. Conventionally, text sequences are considered as a bag of tokens such as BoW and TF-IDF in NLP tasks. With recent success of Word Embeddings techniques (Mikolov et al., 2013; Pennington et al., 2014), sentences are typically represented as a sequence of tokens in NLP tasks. Hence, popular deep learning techniques such as recurrent neural networks (Schuster and Paliwal, 1997) and convolutional neural networks (Krizhevsky et al., 2012) have been widely applied for modeling text sequence.
-<br>
-However, there is a rich variety of NLP problems that can be best expressed with a graph structure. For instance, the sentence structural information in text sequence (i.e. syntactic parsing trees like dependency and constituency parsing trees) can be exploited to augment original sequence data by incorporating the task-specific knowledge. Similarly, the semantic information in sequence data (i.e. semantic parsing graphs like Abstract Meaning Representation graphs and Information Extraction graphs) can be leveraged to enhance original sequence data as well. Therefore, these graphstructured data can encode complicated pairwise relationships between entity tokens for learning more informative representations.
-<br>
-Unfortunately, deep learning techniques that were disruptive for Euclidean data (e.g, images) or sequence data (e.g, text) are not immediately applicable to graph-structured data, due to the complexity of graph data such as irregular structure and varying size of node neighbors. As a result, this gap has driven a tide in research for deep learning on graphs, especially in development of graph neural networks (GNNs) (Kipf and Welling, 2016; Defferrard et al., 2016; Hamilton et al., 2017a).
-<br>
-This wave of research at the intersection of deep learning on graphs and NLP has influenced a variety of NLP tasks. There has seen a surge of interests in applying and developing different GNNs variants and achieved considerable success in many NLP tasks, ranging from classification tasks like sentence classification (Henaff et al., 2015; Huang and Carley, 2019), semantic role labeling Luo and Zhao (2020); Gui et al. (2019), and relation extraction (Qu et al., 2020; Sahu et al., 2019), to generation tasks like machine translation (Bastings et al., 2017; Beck et al., 2018), question generation (Pan et al., 2020; Sachan et al., 2020), and summarization (Fernandes et al., 2019; Yasunaga et al., 2017). Despite the successes these existing research has achieved, deep learning on graphs for NLP still encounters many challenges, namely,
-<br>
-<ul>
-<li>Automatically transforming original text sequence data into highly graph-structured data. Such challenge is profound in NLP since most of the NLP tasks involving using the text sequences as the original inputs. Automatic graph construction from the text sequence to utilize the underlying structural information is a crucial step in utilizing graph neural networks for NLP problems.</li>
-<li>Properly determining graph representation learning techniques. It is critical to come up with specially-designed GNNs to learn the unique characteristics of different graph-structures data such as undirected, directed, multi-relational and heterogeneous graphs.</li>
-<li>Effectively modeling complex data. Such challenge is important since many NLP tasks involve learning the mapping between the graph-based inputs and other highly structured output data such as sequences, trees, as well as graph data with multi-types in both nodes and edges.</li>
-</ul>
-<h1>Goals</h1>
-We aim to build a community of deep graph learning for natural language processing (DLG4NLP). 
 
 {% endblock %}
+{% block heading %}
+
+<div class="pp-card m-3" style="">
+    <div class="card-header">
+        <h2>
+            About
+        </h2>
+        
+        <p>
+        Deep learning has become the dominant approach in coping with various tasks in Natural Language Processing (NLP) today, especially when operated on large-scale text corpora. Conventionally, text sequences are considered as a bag of tokens such as BoW and TF-IDF in NLP tasks. With recent success of Word Embeddings techniques (Mikolov et al., 2013; Pennington et al., 2014), sentences are typically represented as a sequence of tokens in NLP tasks. Hence, popular deep learning techniques such as recurrent neural networks (Schuster and Paliwal, 1997) and convolutional neural networks (Krizhevsky et al., 2012) have been widely applied for modeling text sequence.
+        </p>
+        <p>
+        However, there is a rich variety of NLP problems that can be best expressed with a graph structure. For instance, the sentence structural information in text sequence (i.e. syntactic parsing trees like dependency and constituency parsing trees) can be exploited to augment original sequence data by incorporating the task-specific knowledge. Similarly, the semantic information in sequence data (i.e. semantic parsing graphs like Abstract Meaning Representation graphs and Information Extraction graphs) can be leveraged to enhance original sequence data as well. Therefore, these graphstructured data can encode complicated pairwise relationships between entity tokens for learning more informative representations.
+        </p>
+        <p>
+        Unfortunately, deep learning techniques that were disruptive for Euclidean data (e.g, images) or sequence data (e.g, text) are not immediately applicable to graph-structured data, due to the complexity of graph data such as irregular structure and varying size of node neighbors. As a result, this gap has driven a tide in research for deep learning on graphs, especially in development of graph neural networks (GNNs) (Kipf and Welling, 2016; Defferrard et al., 2016; Hamilton et al., 2017a).
+        </p>
+        <p>
+        This wave of research at the intersection of deep learning on graphs and NLP has influenced a variety of NLP tasks. There has seen a surge of interests in applying and developing different GNNs variants and achieved considerable success in many NLP tasks, ranging from classification tasks like sentence classification (Henaff et al., 2015; Huang and Carley, 2019), semantic role labeling Luo and Zhao (2020); Gui et al. (2019), and relation extraction (Qu et al., 2020; Sahu et al., 2019), to generation tasks like machine translation (Bastings et al., 2017; Beck et al., 2018), question generation (Pan et al., 2020; Sachan et al., 2020), and summarization (Fernandes et al., 2019; Yasunaga et al., 2017). Despite the successes these existing research has achieved, deep learning on graphs for NLP still encounters many challenges, namely,
+        </p>
+        <ui>
+        <li>
+        Automatically transforming original text sequence data into highly graph-structured data. Such challenge is profound in NLP since most of the NLP tasks involving using the text sequences as the original inputs. Automatic graph construction from the text sequence to utilize the underlying structural information is a crucial step in utilizing graph neural networks for NLP problems.
+        </li>
+        <li>
+        Properly determining graph representation learning techniques. It is critical to come up with specially-designed GNNs to learn the unique characteristics of different graph-structures data such as undirected, directed, multi-relational and heterogeneous graphs.
+        </li>
+        <li>
+        Effectively modeling complex data. Such challenge is important since many NLP tasks involve learning the mapping between the graph-based inputs and other highly structured output data such as sequences, trees, as well as graph data with multi-types in both nodes and edges.
+        </li>
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}
+
