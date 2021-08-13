@@ -363,6 +363,7 @@ class Tutorial:
     abstract: str
     details: str
     pdf: str
+    video: str
 #    website: Optional[str]
 #    material: Optional[str]
 #    slides: Optional[str]

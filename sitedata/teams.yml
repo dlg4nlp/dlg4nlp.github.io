@@ -27,7 +27,7 @@ teams:
 - role: Developer
   name: Shucheng Li
   aff: Nanjing University
-  image:
+  image: static/images/shucheng.jpeg
   pweb: /
 - role: Developer
   name: Saizhuo Wang
