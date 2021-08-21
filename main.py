@@ -11,6 +11,7 @@ from flaskext.markdown import Markdown
 from miniconf.load_site_data import load_site_data
 from miniconf.site_data import Paper, PlenarySession, Tutorial, Workshop
 
+
 site_data: Dict[str, Any] = {}
 by_uid: Dict[str, Any] = {}
 
