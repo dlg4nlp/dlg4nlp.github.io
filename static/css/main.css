@@ -19,7 +19,7 @@ label:text-muted,
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: white;
+  background-color: azure;
 }
 
 .bg-emnlp {
@@ -111,8 +111,8 @@ body .nav-pills .nav-link.active {
 
 .card-header {
   font-family: "Lato";
-  background-color:white;
-  border-color: white;
+  background-color:aliceblue;
+  border-color: cyan;
 }
 
 .card-header .card-title {
