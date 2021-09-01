@@ -112,7 +112,7 @@ body .nav-pills .nav-link.active {
 .card-header {
   font-family: "Lato";
   background-color:aliceblue;
-  border-color: cyan;
+  border-color: aliceblue;
 }
 
 .card-header .card-title {

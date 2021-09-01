@@ -19,6 +19,7 @@ by_uid: Dict[str, Any] = {}
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.config['FREEZER_DESTINATION']='docs'
 freezer = Freezer(app)
 markdown = Markdown(app)
 
@@ -508,7 +509,7 @@ def parse_arguments():
         "-b",
         action="store_true",
         default=False,
-        dest="build",
+        dest="docs",
         help="Convert the site to static assets",
     )
 
