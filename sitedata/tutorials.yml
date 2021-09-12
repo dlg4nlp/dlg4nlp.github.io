@@ -6,6 +6,10 @@
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Yunyao Li
   details: Liang Zhao, Emory University, liang.zhao@emory.edu <br> Lingfei Wu, JD.COM Silicon Valley Research Center, lwu@email.wm.edu<br>Peng Cui, Tsinghua University, cuip@tsinghua.edu.cn<br>Jian Pei, Simon Fraser University, jpei@cs.sfu.edu
   abstract: |-
+    <div class="col-md-12 col-xs-12 my-auto p-2" >
+    <center>
+    <iframe width="500" height="281" src="https://www.youtube.com/embed/f749kEcT3WI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
     <div class="pp-card m-1" style="">
     <div class="card-header">
     <h2>Abstract</h2>
@@ -127,6 +131,10 @@
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Bang Liu
   details: Peng Cui, Tsinghua University, cuip@tsinghua.edu.cn<br>Lingfei Wu, JD.COM Silicon Valley Research Center, lwu@email.wm.edu<br>Jian Pei, Simon Fraser University, jpei@cs.sfu.edu<br>Liang Zhao, Emory University, liang.zhao@emory.edu <br>Xiao Wang, Beijing University of Posts and Telecommunications, xiaowang@bupt.edu.cn
   abstract: |-
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
+        <center>
+        <iframe width="500" height="281" src="https://www.youtube.com/embed/vPcHv4yRW9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
         <div class="pp-card m-1" style="">
         <div class="card-header">
         <h2>Abstract</h2>
@@ -381,6 +389,10 @@
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Yunyao Li, Bang Liu
   details: Jian Tang, Mila-Quebec AI Institute, jian.tange@hec.ca<br>Renjie Liao, University of Toronto, rjliao@cs.toronto.edu
   abstract: |-
+        <div class="col-md-12 col-xs-12 my-auto p-2" >
+        <center>
+        <iframe width="500" height="281" src="https://www.youtube.com/embed/qPXLmtv1Pzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
         <div class="pp-card m-1" style="">
         <div class="card-header">
         <h2>Abstract</h2>
