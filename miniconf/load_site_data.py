@@ -1526,6 +1526,7 @@ def build_tutorials(raw_tutorials: List[Dict[str, Any]]) -> List[Tutorial]:
             id=item["UID"],
             title=item["title"],
             organizers=item["organizers"],
+            organizer_top=item["organizer_top"],
             abstract=item["abstract"],
             details=item["details"],
             pdf=item["pdf"],

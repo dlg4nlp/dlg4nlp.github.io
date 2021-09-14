@@ -16,16 +16,18 @@
     </h3>
 
     <div class="text-center p-3">
-    <a class="card-link" href="#details">
-      Abstract
-    </a>
-    <a class="card-link" href="{{tutorial.pdf}}">
-        Slides
-    </a>
-    
-    <a class="card-link" href="{{tutorial.video}}">
-        Video
-    </a>
+        {{tutorial.organizer_top|safe}}
+    </div>
+<!--    <a class="card-link" href="#details">-->
+<!--      Abstract-->
+<!--    </a>-->
+<!--    <a class="card-link" href="{{tutorial.pdf}}">-->
+<!--        Slides-->
+<!--    </a>-->
+<!--    -->
+<!--    <a class="card-link" href="{{tutorial.video}}">-->
+<!--        Video-->
+<!--    </a>-->
 
     {% if tutorial.authors %}
     <a class="card-link" data-toggle="collapse" role="button" href="#author">
