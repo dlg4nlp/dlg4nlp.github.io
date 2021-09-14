@@ -277,14 +277,86 @@
         
 
 
+
 <div class="row">
   <h3><b>A powerful and flexible deep graph learning library for natural language processing</b></h2>
     <div class="col-md-6 col-sm-12 pr-5 lead">
         <dl>
             <br>
             <h5>Graph4NLP is an easy-to-use library for R&D at the intersection of Deep Learning on Graphs and Natural Language Processing (i.e., DLG4NLP). It provides both full implementations of state-of-the-art models for data scientists and also flexible interfaces to build customized models for researchers and developers with whole-pipeline support. Built upon highly-optimized runtime libraries including DGL , Graph4NLP has both high running efficiency and great extensibility. </h5>
-
-
+            
+            <!-- <div class="pp-card m-4" style="padding-top:-10px"> -->
+            <div class="btn-group">
+                <button class="button tablink dlg-blue" onclick="openInstallCode(event, 'cpu')">CPU</button>
+                <button class="button tablink" onclick="openInstallCode(event, 'cuda-92')">CUDA 9.2</button>
+                <button class="button tablink" onclick="openInstallCode(event, 'cuda-101')">CUDA 10.1</button>
+                <button class="button tablink" onclick="openInstallCode(event, 'cuda-102')">CUDA 10.2</button>
+                <button class="button tablink" onclick="openInstallCode(event, 'cuda-110')">CUDA 11.0</button>
+            </div>
+            <div class="card-header-large">
+            <!-- <br> -->
+              <div id="cpu" class="install-code">
+            
+            <code style="font-size:80%;font-family:monospace">$ pip install graph4nlp </code>
+            <button style="float:right" class="button" data-clipboard-text="pip install graph4nlp">Copy</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+            <script>
+                new ClipboardJS(".button");
+                </script>
+            <!-- </div> -->
+          </div>
+          <div id="cuda-92" class="install-code" style="display:none">
+            <!-- <div class="card-header-large"> -->
+            <code style="font-size:80%;font-family:monospace">$ pip install graph4nlp-cu92 </code>
+            <button style="float:right" class="button" data-clipboard-text="pip install graph4nlp-cu92">Copy</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+            <script>
+                new ClipboardJS(".button");
+                </script>
+            </div>
+            <div id="cuda-101" class="install-code" style="display:none">
+              <!-- <div class="card-header-large"> -->
+              <code style="font-size:80%;font-family:monospace">$ pip install graph4nlp-cu101 </code>
+              <button style="float:right" class="button" data-clipboard-text="pip install graph4nlp-cu101">Copy</button>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+              <script>
+                  new ClipboardJS(".button");
+                  </script>
+              </div>
+              <div id="cuda-102" class="install-code" style="display:none">
+                <!-- <div class="card-header-large"> -->
+                <code style="font-size:80%;font-family:monospace">$ pip install graph4nlp-cu102 </code>
+                <button style="float:right" class="button" data-clipboard-text="pip install graph4nlp-cu102">Copy</button>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+                <script>
+                    new ClipboardJS(".button");
+                    </script>
+                </div>
+                <div id="cuda-110" class="install-code" style="display:none">
+                  <!-- <div class="card-header-large"> -->
+                  <code style="font-size:80%;font-family:monospace">$ pip install graph4nlp-cu110 </code>
+                  <button style="float:right" class="button" data-clipboard-text="pip install graph4nlp-cu110">Copy</button>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+                  <script>
+                      new ClipboardJS(".button");
+                      </script>
+                  </div>
+          </div>
+          <script>
+            function openInstallCode(evt, version) {
+              var i, x, tablinks;
+              x = document.getElementsByClassName("install-code");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace("dlg-blue", "");
+              }
+              document.getElementById(version).style.display = "block";
+              evt.currentTarget.className += " dlg-blue";
+            }
+          </script>
     </div>
 
 
@@ -305,7 +377,7 @@
     </div>
 </div>
 </div>
-<div class="pp-card m-4" style="">
+<!-- <div class="pp-card m-4" style="">
     <div class="card-header">
 <code>$ pip install graph4nlp         </code>
 <button class="button" data-clipboard-text="pip install graph4nlp">Copy</button>
@@ -314,10 +386,10 @@
     new ClipboardJS(".button");
     </script>
 </div>
-</div>
+</div> -->
 <div class="pp-card m-3" style="">
-<div class="card-header">
-            <h4>
+<div class="card-header-large">
+            <h4 style="padding-top:10px; padding-left:15px">
                 <b>Key Features</b>
             </h4>
             <div class="row">
@@ -359,9 +431,9 @@
 </div>
 </div>
 <div class="pp-card m-3" style="">
-    <div class="card-header">
-<h4>
-<b>Examples for Various Natural Language Processing Tasks</b>
+    <div class="card-header-large" >
+<h4 style="padding-top:10px; padding-left:15px">
+<b >Examples for Various Natural Language Processing Tasks</b>
 </h4>
 <div class="row">
     
@@ -369,15 +441,15 @@
         <div class="pp-card m-4 bg-light" style="">
             <div class="card-header">
             <center>
-        <a href="https://graph4ai.github.io/graph4nlp/tutorial/text_classification.html"><img src=static/images/dlg-fig1.001.png }}" class="rounded" style="height: 200px;"/>
-        <br><p style="color:red;font-weight:bold;">Text Classification</a>
+        <a href="https://graph4ai.github.io/graph4nlp/tutorial/text_classification.html"><img src=static/images/dlg-fig1.001.png }}" class="rounded" style="width:100%;"/>
+        <br><p style="color:blueviolet;font-weight:bold;margin-top:65px;font-size:130%">Text Classification</p></a>
       </div></center></div></div>
         <div class="col-md-6 col-sm-12 pr-5 lead">
         <div class="pp-card m-3 bg-light" style="">
         <div class="card-header">
         <center>
           <a href="https://graph4ai.github.io/graph4nlp/tutorial/semantic_parsing.html">
-        <img src=static/images/dlg-fig1.002.png }}" class="rounded" style="height: 200px;color:red;"/><br><p style="color:red;font-weight:bold;">Semantic Parsing</a>
+        <img src=static/images/dlg-fig1.002.png }}" class="rounded" style="width:100%;color:red;"/><br><p style="color:blueviolet;font-weight:bold;margin-top:90px;font-size:130%">Semantic Parsing</p></a>
     </div></center></div></div>
     
     <div class="col-md-6 col-sm-12 pr-5 lead">
@@ -385,7 +457,7 @@
             <div class="card-header">
                 <center>
          <a href="https://graph4ai.github.io/graph4nlp/tutorial/math_word_problem.html">
-        <img src=static/images/dlg-fig1.003.png }}" class="rounded" style="height: 200px;color:red;"/><br><p style="color:red;font-weight:bold;">Math Word Problem</a>
+        <img src=static/images/dlg-fig1.003.png }}" class="rounded" style="width:100%;color:red;"/><br><p style="color:blueviolet;font-weight:bold;margin-top:10px;font-size:130%">Math Word Problem</p></a>
       </div></center></div></div>
         
         <div class="col-md-6 col-sm-12 pr-5 lead">
@@ -393,7 +465,7 @@
         <div class="card-header">
         <center>
           <a href="https://graph4ai.github.io/graph4nlp/tutorial/knowledge_graph_completion.html">
-        <img src=static/images/dlg-fig1.004.png }}" class="rounded" style="height: 200px;"/><br><p style="color:red;font-weight:bold;">Knowledge Graph Completion </a></div></center></div></div>
+        <img src=static/images/dlg-fig1.004.png }}" class="rounded" style="width:100%"/><br><p style="color:blueviolet;font-weight:bold;margin-top:90px;font-size:130%">Knowledge Graph Completion</p> </a></div></center></div></div>
 <!--<h5>-->
 <!--Text Classification [<a href="https://graph4ai.github.io/graph4nlp/tutorial/text_classification.html">link</a>]-->
 <!--</h5>-->
