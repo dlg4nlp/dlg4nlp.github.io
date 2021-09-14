@@ -360,6 +360,7 @@ class Tutorial:
     id: str
     title: str
     organizers: List[str]
+    organizer_top: str
     abstract: str
     details: str
     pdf: str

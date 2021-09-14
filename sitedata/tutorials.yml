@@ -4,11 +4,63 @@
   pdf: https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view?usp=sharing
   video: /
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Yunyao Li
+  organizer_top: |-
+        <div class="row mb-5 mt-3">
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/lingfei.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://sites.google.com/a/email.wm.edu/teddy-lfwu/">Lingfei Wu</a>, JD.COM Silicon Valley Research Center <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yuchen.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://academic.hugochan.net/">Yu Chen</a>, Facebook AI <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/heng.png }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://blender.cs.illinois.edu/hengji.html">Heng Ji</a>, University of Illinois Urbana-Champaign <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yunyao.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-yunyaoli">Yunyao Li</a>, IBM Research<br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
   details: Liang Zhao, Emory University, liang.zhao@emory.edu <br> Lingfei Wu, JD.COM Silicon Valley Research Center, lwu@email.wm.edu<br>Peng Cui, Tsinghua University, cuip@tsinghua.edu.cn<br>Jian Pei, Simon Fraser University, jpei@cs.sfu.edu
   abstract: |-
     <div class="col-md-12 col-xs-12 my-auto p-2" >
     <center>
-    <iframe width="500" height="281" src="https://www.youtube.com/embed/f749kEcT3WI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/f749kEcT3WI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </center>
     <div class="pp-card m-1" style="">
     <div class="card-header">
@@ -22,7 +74,7 @@
         </div>
         <div class="pp-card m-1" style="">
         <div class="card-header">
-        <h2>Outline</h2>
+        <h2>Outline [<a href="https://drive.google.com/file/d/1_7cPySt9Pzfd6MaqNihD4FkKI0qzf-s4/view?usp=sharing">Slides</a>]</h2>
         Introduction (20 mins)
         <ul>
         <li>Natural Language Processing: A Graph Perspective</li>
@@ -129,11 +181,62 @@
   video: https://lnkd.in/ekx3qaJ
   title: 'DLG4NLP SIGIR 2021'
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Bang Liu
+  organizer_top: |-
+        <div class="row mb-5 mt-3">
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/lingfei.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://sites.google.com/a/email.wm.edu/teddy-lfwu/">Lingfei Wu</a>, JD.COM Silicon Valley Research Center <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yuchen.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://academic.hugochan.net/">Yu Chen</a>, Facebook AI <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/heng.png }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://blender.cs.illinois.edu/hengji.html">Heng Ji</a>, University of Illinois Urbana-Champaign <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/bang.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://www-labs.iro.umontreal.ca/~liubang/">Bang Liu</a>, University of Montreal
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
   details: Peng Cui, Tsinghua University, cuip@tsinghua.edu.cn<br>Lingfei Wu, JD.COM Silicon Valley Research Center, lwu@email.wm.edu<br>Jian Pei, Simon Fraser University, jpei@cs.sfu.edu<br>Liang Zhao, Emory University, liang.zhao@emory.edu <br>Xiao Wang, Beijing University of Posts and Telecommunications, xiaowang@bupt.edu.cn
   abstract: |-
         <div class="col-md-12 col-xs-12 my-auto p-2" >
         <center>
-        <iframe width="500" height="281" src="https://www.youtube.com/embed/vPcHv4yRW9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/vPcHv4yRW9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </center>
         <div class="pp-card m-1" style="">
         <div class="card-header">
@@ -147,7 +250,7 @@
         </div>
         <div class="pp-card m-1" style="">
         <div class="card-header">
-        <h2>Outline</h2>
+        <h2>Outline [<a href="https://lnkd.in/ekMx-m7">Slides</a>]</h2>
         Introduction (20 mins)
         <ul>
         <li>Natural Language Processing: A Graph Perspective</li>
@@ -256,6 +359,72 @@
   video: /
   title: 'DLG4NLP KDD 2021'
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Yunyao Li, Bang Liu
+  organizer_top: |-
+        <div class="row mb-5 mt-3">
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/lingfei.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://sites.google.com/a/email.wm.edu/teddy-lfwu/">Lingfei Wu</a>, JD.COM Silicon Valley Research Center <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yuchen.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://academic.hugochan.net/">Yu Chen</a>, Facebook AI <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="row mb-5 mt-3">
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/heng.png }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://blender.cs.illinois.edu/hengji.html">Heng Ji</a>, University of Illinois Urbana-Champaign <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yunyao.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-yunyaoli">Yunyao Li</a>, IBM Research<br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/bang.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://www-labs.iro.umontreal.ca/~liubang/">Bang Liu</a>, University of Montreal
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
   details: Lingfei Wu, JD.COM Silicon Valley Research Center, lwu@email.wm.edu<br>Peng Cui, Tsinghua University, cuip@tsinghua.edu.cn<br>Jian Pei, Simon Fraser University, jpei@cs.sfu.edu<br>Liang Zhao, Emory University, liang.zhao@emory.edu <br>Le Song, Mohamed bin Zayed University of Artificial Intelligence, dasongle@gmail.com
   abstract: |-
         <div class="pp-card m-1" style="">
@@ -270,7 +439,7 @@
         </div>
         <div class="pp-card m-1" style="">
         <div class="card-header">
-        <h2>Outline</h2>
+        <h2>Outline [Slides]</h2>
         Introduction (20 mins)
         <ul>
         <li>Natural Language Processing: A Graph Perspective</li>
@@ -388,10 +557,76 @@
   title: 'DLG4NLP IJCAI 2021'
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Yunyao Li, Bang Liu
   details: Jian Tang, Mila-Quebec AI Institute, jian.tange@hec.ca<br>Renjie Liao, University of Toronto, rjliao@cs.toronto.edu
+  organizer_top: |-
+        <div class="row mb-5 mt-3">
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/lingfei.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://sites.google.com/a/email.wm.edu/teddy-lfwu/">Lingfei Wu</a>, JD.COM Silicon Valley Research Center <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yuchen.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://academic.hugochan.net/">Yu Chen</a>, Facebook AI <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="row mb-5 mt-3">
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/heng.png }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://blender.cs.illinois.edu/hengji.html">Heng Ji</a>, University of Illinois Urbana-Champaign <br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/yunyao.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-yunyaoli">Yunyao Li</a>, IBM Research<br>
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+        <div class="card text-center shadow p-3 rounded h-100" id='pinfo'>
+        <div class="text-muted">
+        <img src=static/images/bang.jpeg }}" class="rounded" style="height: 150px;"/>
+        <h5 class="card-title" align="center"></h5>
+        <div>
+        <h6 class="card-subtitle text-muted">
+        <a href="http://www-labs.iro.umontreal.ca/~liubang/">Bang Liu</a>, University of Montreal
+        </h6>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
   abstract: |-
         <div class="col-md-12 col-xs-12 my-auto p-2" >
         <center>
-        <iframe width="500" height="281" src="https://www.youtube.com/embed/qPXLmtv1Pzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/qPXLmtv1Pzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </center>
         <div class="pp-card m-1" style="">
         <div class="card-header">
@@ -405,7 +640,7 @@
         </div>
         <div class="pp-card m-1" style="">
         <div class="card-header">
-        <h2>Outline</h2>
+        <h2>Outline [Slides]</h2>
         Introduction (20 mins)
         <ul>
         <li>Natural Language Processing: A Graph Perspective</li>
