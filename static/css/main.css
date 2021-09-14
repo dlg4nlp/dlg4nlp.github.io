@@ -11,6 +11,40 @@ h2,
 h3 {
   font-family: "Lato";
 }
+.btn-group .button {
+  transition-duration: 0.4s;
+  background-color: azure;
+  color: black;
+  /* border: 2px solid #008CBA; */
+  border: none;
+  /* border-radius: 4px; */
+  font-size: 14px;
+  float:left;
+}
+
+.btn-group .button:hover {
+  background-color: #008CBA;
+  color: azure;
+}
+
+.dlg-blue, .dlg-hover-blue:hover {
+  color: #fff!important;
+  background-color: #008CBA!important;
+}
+
+.button {
+  transition-duration: 0.4s;
+  background-color: azure;
+  color: black;
+  border: 2px solid #008CBA;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: azure;
+}
 
 label:text-muted,
 .nav-link {
@@ -79,6 +113,19 @@ body {
   border: 1px solid #eee;
 }
 
+.pp-card-header-large {
+  font-family: "Lato";
+  height: 380px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pp-mode-list .pp-card-header-large {
+  height: 175px;
+  border: 1px solid #eee;
+}
+
 .pp-card-footer {
   position: absolute;
   width: 100%;
@@ -86,6 +133,9 @@ body {
 }
 
 .pp-mode-list .pp-card-header .card-title {
+  font-size: 17px;
+}
+.pp-mode-list .pp-card-header-large .card-title {
   font-size: 17px;
 }
 
@@ -111,13 +161,23 @@ body .nav-pills .nav-link.active {
 
 .card-header {
   font-family: "Lato";
-  background-color:aliceblue;
-  border-color: aliceblue;
+  background-color:rgb(243, 238, 253);
+  border-color: rgb(241, 236, 253);
 }
 
 .card-header .card-title {
   font-family: "Lato";
 }
+.card-header-large {
+  font-family: "Lato";
+  background-color: aliceblue;
+  border-color: aliceblue;
+}
+
+.card-header-large .card-title {
+  font-family: "Lato";
+}
+
 
 .cards.myCard {
   display: flex;
