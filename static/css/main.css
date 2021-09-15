@@ -18,7 +18,7 @@ h3 {
   /* border: 2px solid #008CBA; */
   border: none;
   /* border-radius: 4px; */
-  font-size: 14px;
+  font-size: 1.1rem;
   float:left;
 }
 
@@ -32,17 +32,23 @@ h3 {
   background-color: #008CBA!important;
 }
 
+.install-code {
+  font-size: 1.35rem;
+  font-family: monospace;
+}
+
 .button {
   transition-duration: 0.4s;
-  background-color: azure;
-  color: black;
+  background-color: #008CBA;
+  color: white;
   border: 2px solid #008CBA;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 1.1rem;
 }
 
 .button:hover {
-  background-color: #008CBA;
+  background-color: #51b0cf;
+  border-color: #51b0cf;
   color: azure;
 }
 
@@ -53,7 +59,7 @@ label:text-muted,
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: azure;
+  background-color: white;
 }
 
 .bg-emnlp {
@@ -116,7 +122,7 @@ body {
 .pp-card-header-large {
   font-family: "Lato";
   height: 380px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -161,8 +167,8 @@ body .nav-pills .nav-link.active {
 
 .card-header {
   font-family: "Lato";
-  background-color:rgb(243, 238, 253);
-  border-color: rgb(241, 236, 253);
+  background-color:white;
+  border-color: white;
 }
 
 .card-header .card-title {
@@ -170,8 +176,8 @@ body .nav-pills .nav-link.active {
 }
 .card-header-large {
   font-family: "Lato";
-  background-color: aliceblue;
-  border-color: aliceblue;
+  background-color: #fff6f8;
+  border-color: #fff6f8;
 }
 
 .card-header-large .card-title {
