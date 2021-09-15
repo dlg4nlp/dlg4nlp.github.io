@@ -18,7 +18,7 @@ h3 {
   /* border: 2px solid #008CBA; */
   border: none;
   /* border-radius: 4px; */
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   float:left;
 }
 
@@ -43,7 +43,7 @@ h3 {
   color: white;
   border: 2px solid #008CBA;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .button:hover {
@@ -59,7 +59,7 @@ label:text-muted,
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: azure;
+  background-color: white;
 }
 
 .bg-emnlp {
@@ -167,8 +167,8 @@ body .nav-pills .nav-link.active {
 
 .card-header {
   font-family: "Lato";
-  background-color:rgb(243, 238, 253);
-  border-color: rgb(241, 236, 253);
+  background-color:white;
+  border-color: white;
 }
 
 .card-header .card-title {
@@ -176,8 +176,8 @@ body .nav-pills .nav-link.active {
 }
 .card-header-large {
   font-family: "Lato";
-  background-color: aliceblue;
-  border-color: aliceblue;
+  background-color: #fff6f8;
+  border-color: #fff6f8;
 }
 
 .card-header-large .card-title {
