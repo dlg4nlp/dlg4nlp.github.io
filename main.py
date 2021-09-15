@@ -155,6 +155,12 @@ def teams():
     data["teams"] = site_data["teams"]
     return render_template("teams.html", **data)
 
+@app.route("/publications.html")
+def publications():
+    data = _data()
+#    data["teams"] = site_data["teams"]
+    return render_template("publications.html", **data)
+
 
 #@app.route("/help_desk.html")
 #def help_desk():
