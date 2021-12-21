@@ -362,16 +362,16 @@
 <div class="card-header">
 <h2>Abstract</h2>
 <p>
-Due to its great power in modeling non-Euclidean data like graphs or manifolds, deep learning on graph techniques (i.e., Graph Neural Networks (GNNs)) have opened a new door to solving challenging graph-related NLP problems. There has seen a surge of interests in applying deep learning on graph techniques to NLP, and has achieved considerable success in many NLP tasks, ranging from classification tasks like sentence classification, semantic role labeling and relation extraction, to generation tasks like machine translation, question generation and summarization. Despite these successes, deep learning on graphs for NLP still face many challenges, including automatically transforming original text sequence data into highly graph-structured data, and effectively modeling complex data that involves mapping between graph-based inputs and other highly structured output data such as sequences, trees, and graph data with multi-types in both nodes and edges.<br><br>
+There are a rich variety of NLP problems that can be best expressed with graph structures. Due to the great power in modeling non- Euclidean data like graphs, deep learning on graphs techniques (i.e., Graph Neural Networks (GNNs)) have opened a new door to solving challenging graph-related NLP problems, and have already achieved great success. Despite the success, deep learning on graphs for NLP (DLG4NLP) still faces many challenges (e.g., automatic graph construction, graph representation learning for complex graphs, learning mapping between complex data structures).<br><br>
 
-This tutorial will cover relevant and interesting topics on applying deep learning on graph techniques to NLP, including automatic graph construction for NLP, graph representation learning for NLP, advanced GNN based models (e.g., graph2seq, graph2tree, and graph2graph) for NLP, and the applications of GNNs in various NLP tasks (e.g., machine translation, natural language generation, information extraction and semantic parsing). In addition, handson demonstration sessions will be included to help the audience gain practical experience on applying GNNs to solve challenging NLP problems using our recently developed open source library –Graph4NLP, the first library for researchers and practitioners for easy use of GNNs for various NLP tasks.
+This tutorial will cover relevant and interesting topics on apply- ing deep learning on graph techniques to NLP, including automatic graph construction for NLP, graph representation learning for NLP, advanced GNN based models (e.g., graph2seq and graph2tree) for NLP, and the applications of GNNs in various NLP tasks (e.g., ma- chine translation, natural language generation, information extrac- tion and semantic parsing). In addition, hands-on demonstration sessions will be included to help the audience gain practical experi- ence on applying GNNs to solve challenging NLP problems using our recently developed open source library – Graph4NLP, the first library for researchers and practitioners for easy use of GNNs for various NLP tasks.
 </p>
 </div>
 </div>
 <div class="pp-card m-1" style="">
 <div class="card-header">
 <h2>Outline</h2>
-Introduction (20 mins)
+Introduction (30 mins)
 <ul>
 <li>Natural Language Processing: A Graph Perspective</li>
 <li>Graph Based Algorithms for Natural Language Processing</li>
@@ -391,9 +391,9 @@ Methodologies (60 mins)
 </ul>
 <li>Graph Representation Learning for NLP</li>
 <ul>
-<li>Graph Neural Networks for Improved Text Representation</li>
-<li>Graph Neural Networks for Joint Text & Knowledge Representation</li>
-<li>Graph Neural Networks for Various Graph Types</li>
+<li>Homogeneous Graph Neural Networks for NLP</li>
+<li>Multi-relational Graph Neural Networks for NLP</li>
+<li>Heterogeneous Graph Neural Networks for NLP</li>
 </ul>
 <li>GNN Based Encoder-Decoder Models</li>
 <ul>
@@ -401,35 +401,21 @@ Methodologies (60 mins)
 <li>Graph-to-Tree Models</li>
 </ul>
 </ul>
-Applications (60 mins)
+Applications (70 mins)
 <ul>
-<li>Machine Translation</li>
-<ul>
-<li>Methodologies</li>
-<li>Hands-on Demonstration</li>
-</ul>
-<li>Natural Language Generation</li>
-<ul>
-<li>Methodologies</li>
-<li>Hands-on Demonstration</li>
-</ul>
-<li>Machine Reading Comprehension</li>
-<ul>
-<li>Methodologies</li>
-<li>Hands-on Demonstration</li>
-</ul>
 <li>Information Extraction</li>
+
+<li>Machine Reading Comprehension</li>
+
+<li>Natural Language Generation</li>
+
+<li>Clustering and Mining</li>
+
+</ul>
+Hands-on Demonstration (10 mins)
 <ul>
-<li>Methodologies</li>
-<li>Hands-on Demonstration</li>
 </ul>
-<li>Semantic Parsing</li>
-<ul>
-<li>Methodologies</li>
-<li>Hands-on Demonstration</li>
-</ul>
-</ul>
-Conclusion and Open Direction (10 mins)
+Conclusion and Open Directions (10 mins)
 </div>
 </div>
 <div class="pp-card m-1" style="">
@@ -442,7 +428,7 @@ Conclusion and Open Direction (10 mins)
 <h6 class="card-subtitle text-muted">
 <a href="https://sites.google.com/a/email.wm.edu/teddy-lfwu/">Lingfei Wu</a>, JD.COM Silicon Valley Research Center <br>
 </h6>
-Lingfei Wu earned his Ph.D. degree in computer science from the College of William and Mary in 2016. He currently serves as a Principal Scientist at JD.COM Silicon Valley Research Center. He has published more than 80 top-ranked conference and journal papers and is a co-inventor of more than 40 filed US patents. Because of the high commercial value of his patents, he has received several invention achievement awards and has been appointed as IBM Master Inventors, class of 2020. He was the recipients of the Best Paper Award and Best Student Paper Award of several conferences such as IEEE ICC’19, AAAI workshop on DLGMA’20 and KDD workshop on DLG’19. His research has been featured in numerous media outlets, including NatureNews, YahooNews, Venturebeat, and TechTalks. He has co-organized 10+ conferences (KDD, AAAI, IEEE BigData) and is the founding co-chair for Workshops of Deep Learning on Graphs (with AAAI’21, AAAI’20, KDD’20, KDD’19, and IEEE BigData’19). He has currently served as Associate Editor for IEEE Transactions on Neural Networks and Learning Systems, ACM Transactions on Knowledge Discovery from Data and International Journal of Intelligent Systems, and regularly served as a SPC/PC member of the following major AI/ML/NLP conferences including KDD, IJCAI, AAAI, NIPS, ICML, ICLR, and ACL. <br>
+Lingfei Wu is a Principal Scientist at JD.COM Silicon Valley Re- search Center. Previously, he was a research staff member and team leader at IBM Research. He has published more than 80 top-ranked conference and journal papers and is a co-inventor of more than 40 filed US patents. Because of the high commercial value of his patents, he has received several invention achievement awards and has been appointed as IBM Master Inventors, class of 2020. He was the recipients of the Best Paper Award and Best Student Paper Award of several conferences such as IEEE ICC’19, AAAI workshop on DLGMA’20 and KDD workshop on DLG’19. His research has been featured in numerous media outlets, including NatureNews, YahooNews, Venturebeat, and TechTalks. He has co-organized 10+ conferences (KDD, AAAI, IEEE BigData) and is the founding co- chair for Workshops of Deep Learning on Graphs (with KDD’21, AAAI’21, AAAI’20, KDD’20, KDD’19, and IEEE BigData’19). He has currently served as Associate Editor for IEEE Transactions on Neural Networks and Learning Systems, ACM Transactions on Knowledge Discovery from Data and International Journal of In- telligent Systems. Lingfei Wu has given many tutorials/keynote presentations in deep learning on graphs for natural language pro- cessing in multiple workshops in KDD’20, CVPR’20, AAAI’20, and Machine Learning & Artificial Intelligence’20. <br>
 <div class="text-muted">
 <img src=static/images/yuchen.jpeg }}" class="rounded" style="height: 150px;"/>
 <h5 class="card-title" align="center"></h5>
@@ -450,7 +436,7 @@ Lingfei Wu earned his Ph.D. degree in computer science from the College of Willi
 <h6 class="card-subtitle text-muted">
 <a href="http://academic.hugochan.net/">Yu Chen</a>, Facebook AI <br>
 </h6>
-Yu Chen is a Research Scientist at Facebook AI. He got his PhD degree in Computer Science from Rensselaer Polytechnic Institute. His research interests lie at the intersection of Machine Learning (Deep Learning), and Natural Language Processing, with a particular emphasis on the fast-growing field of Graph Neural Networks and their applications in various domains. His work has been published in top-ranked conferences including but not limited to NeurIPS, ICML, ICLR, AAAI, IJCAI, NAACL, KDD, WSDM, ISWC, and AMIA. He was the recipient of the Best Student Paper Award of AAAI DLGMA’20. He has served as a PC member in many conferences (e.g., ACL, EMNLP, NAACL, EACL, AAAI, IJCAI and KDD) and journals (e.g., TNNLS, IJIS, TKDE, TKDD, DAMI and TASL). <br>
+Yu Chen is a Research Scientist at Facebook AI. He got his PhD de- gree in Computer Science from Rensselaer Polytechnic Institute. His research interests lie at the intersection of Machine Learning (Deep Learning), and Natural Language Processing, with a particular em- phasis on the fast-growing field of Graph Neural Networks and their applications in various domains. His work has been published in top-ranked conferences including but not limited to NeurIPS, ICML, ICLR, AAAI, IJCAI, NAACL, KDD, WSDM, ISWC, and AMIA. He has delivered tutorials at NAACL, IJCAI, KDD and SIGIR. He was the recipient of the Best Student Paper Award of AAAI DL- GMA’20. He has served as PC members in many conferences (e.g., ACL, EMNLP, NAACL, EACL, AAAI, IJCAI and KDD) and journals (e.g., TNNLS, IJIS, TKDE, TKDD and DAMI). <br>
 <div class="text-muted">
 <img src=static/images/heng.png }}" class="rounded" style="height: 150px;"/>
 <h5 class="card-title" align="center"></h5>
@@ -458,7 +444,17 @@ Yu Chen is a Research Scientist at Facebook AI. He got his PhD degree in Compute
 <h6 class="card-subtitle text-muted">
 <a href="http://blender.cs.illinois.edu/hengji.html">Heng Ji</a>, University of Illinois Urbana-Champaign <br>
 </h6>
-Heng Ji is a professor at the Computer Science Department of University of Illinois at Urbana-Champaign. She is an Amazon Scholar. She was selected as "Young Scientist" and a member of the Global Future Council on the Future of Computing by theWorld Economic Forum in 2016 and 2017. She has received many awards including "AI’s 10 to Watch" Award by IEEE Intelligent Systems in 2013, NSF CAREER award in 2009, ACL2020 Best Demo award, PACLIC2012 Best paper runner-up, "Best of ICDM2013" paper award, and "Best of SDM2013" paper award. She has served as the Program Committee Co-Chair for many conferences including NAACL-HLT2018. She is elected as the North American Chapter of the Association for Computational Linguistics (NAACL) secretary 2020-2021. She has given a large number of keynotes/tutorials presentations in Event Extraction, Natural Language Understanding, and Knowledge Base Construction in many conferences including but not limited to ACL, COLING, EMNLP, NAACL, NeurIPS, SIGMOD, AAAI and KDD. <br>
+Heng Ji is a professor at the Computer Science Department of University of Illinois at Urbana-Champaign. She has received many awards including "AI’s 10 to Watch" Award by IEEE Intelligent Sys- tems in 2013, NSF CAREER award in 2009, PACLIC2012 Best paper runner-up, "Best of ICDM2013" paper award, and "Best of SDM2013" paper award. She has served as the Program Committee Co-Chair of NAACL-HLT2018, NLP-NABD2018, NLPCC2015, CSCKG2016 and CCL2019, and senior area chair for many conferences. She has given a large number of keynotes/tutorials presentations in Event Extraction, Natural Language Understanding, and Knowledge Base Construction in many conferences including but not limited to ACL, EMNLP, NAACL, NeurIPS, AAAI and KDD. <br>
+
+<div class="text-muted">
+<img src=static/images/yunyao.jpeg }}" class="rounded" style="height: 150px;"/>
+<h5 class="card-title" align="center"></h5>
+<div>
+<h6 class="card-subtitle text-muted">
+<a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-yunyaoli">Yunyao Li</a>, IBM Research
+</h6>
+Yunyao Li is a Principal Research Staff Member and Senior Re- search Manager with IBM Research - Almaden, where she manages the Scalable Knowledge Intelligence Department. She is a Master Inventor and a member of the IBM Academy of Technology. Her expertise is in the interdisciplinary areas of natural language pro- cessing, databases, human-computer interaction, and information retrieval. She is interested in designing, developing, and analyzing large-scale systems that are usable by a wide spectrum of users. Her current research focuses on scalable natural language processing. She regularly gives talks and tutorials at conferences and universi- ties across the globe, including a MOOC on information extraction. She received her Ph.D. from the University of Michigan, Ann Arbor.
+
 <div class="text-muted">
 <img src=static/images/bang.jpeg }}" class="rounded" style="height: 150px;"/>
 <h5 class="card-title" align="center"></h5>
@@ -466,7 +462,7 @@ Heng Ji is a professor at the Computer Science Department of University of Illin
 <h6 class="card-subtitle text-muted">
 <a href="http://www-labs.iro.umontreal.ca/~liubang/">Bang Liu</a>, University of Montreal
 </h6>
-Bang Liu is an Assistant Professor in the Department of Computer Science and Operations Research (DIRO) at the University of Montreal, as well as a member of Mila – Quebec Artificial Intelligence Institute. His research interests primarily lie in the areas of natural language processing (NLP), data mining, applied machine learning, and deep learning. He received his B.Engr. degree in 2013 from University of Science and Technology of China (USTC), as well as his M.S. degree and Ph.D. degree from University of Alberta in 2015 and 2020, respectively. He has served as PC members in many conferences (e.g., KDD, AAAI, ICML and WSDM).
+Bang Liu is an Assistant Professor in the Department of Computer Science and Operations Research (DIRO) at the University of Mon- treal, as well as a member of Mila – Quebec Artificial Intelligence Institute. His research interests primarily lie in the areas of natural language processing (NLP), data mining, applied machine learning, and deep learning. He received his B.Engr. degree in 2013 from University of Science and Technology of China (USTC), as well as his M.S. degree and Ph.D. degree from University of Alberta in 2015 and 2020, respectively. He has served as PC members in many conferences (e.g., KDD, AAAI, ICML and WSDM).
 
 </p>
 </div>
