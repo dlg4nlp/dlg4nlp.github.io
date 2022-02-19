@@ -1601,7 +1601,7 @@ def build_workshops(
                     title=item["title"],
                     speakers=item["authors"],
                     presentation_id=item.get("presentation_id", None),
-                    rocketchat_channel=f"paper-{ws_id_to_alias[workshop_id]}-{item['UID'].split('.')[-1]}",
+                    rocketchat_channel="",
                     content=PaperContent(
                         title=item["title"],
                         authors=extract_list_field(item, "authors"),

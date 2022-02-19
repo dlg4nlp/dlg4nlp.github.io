@@ -33,9 +33,6 @@
 {% block heading %}
 {{ components.section("Workshops") }}
 
-<div class="text-center text-muted">
-  You can also view the schedule by going to the "day" view on the <a href="schedule.html" target="_blank">Schedule</a> page for February 8 and February 9.
-</div>
 {% endblock %}
 
 {#{% block content %}#}
@@ -44,7 +41,20 @@
 {#</div>#}
 
 {% block tabs %}
-{{ components.tabs(workshop_days) }}
+<ul class="nav nav-pills justify-content-center">
+  <li class="nav-item">
+    <a
+      class="nav-link active"
+      data-toggle="tab"
+      href="#tab-mq"
+      role="tab"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Workshops
+    </a>
+  </li>
+
+</ul>
 {% endblock %}
 
 {% block content %}

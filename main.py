@@ -277,12 +277,12 @@ def tutorials():
     data["tutorials"] = site_data["tutorials"]
     return render_template("tutorials.html", **data)
 #
-#@app.route("/workshops.html")
-#def workshops():
-#    data = _data()
-#    data["workshops"] = site_data["workshops"]
-#    data["workshop_days"] = site_data["workshop_days"]
-#    return render_template("workshops.html", **data)
+@app.route("/workshops.html")
+def workshops():
+   data = _data()
+   data["workshops"] = site_data["workshops"]
+   data["workshop_days"] = site_data["workshop_days"]
+   return render_template("workshops.html", **data)
 #
 #
 #@app.route("/sponsors.html")

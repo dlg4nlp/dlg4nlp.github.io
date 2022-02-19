@@ -523,7 +523,7 @@
 
           <div class="m-3 text-muted text-center">
             <h4>
-              <a href="workshop_{{workshop.id}}.html" class="main-title" >
+              <a href="{{workshop.website}}" class="main-title" >
                 {{workshop.title}}
               </a>
             </h4>
@@ -536,7 +536,7 @@
           </div>
 
 
-          {% for session in workshop.blocks %}
+          <!-- {% for session in workshop.blocks %}
               <div class="m-3 text-center">
                 {{session.session}}
                 <span class="session_times">{{session.time_string}}</span>
@@ -547,7 +547,7 @@
                   <span id="session-cal-link-{{ workshop.id }}-{{loop.index}}-{{workshop.day.replace(" ", "").lower()}}"></span>
                 </div>
               </div>
-          {% endfor %}
+          {% endfor %} -->
     </div>
   </div>
   {% endfor %}

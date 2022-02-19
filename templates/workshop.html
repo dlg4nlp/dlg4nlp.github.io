@@ -34,15 +34,15 @@
       </a>
       {% endif %}
 
-      {% if workshop.zoom_links| length == 1  %}
+      <!-- {% if workshop.zoom_links| length == 1  %}
         <a href="{{ workshop.zoom_links[0] }}" target="_blank"  class="card-link">
         Zoom Link
         </a>
-      {% endif %}
+      {% endif %} -->
 
     </div>
 
-    <div class="text-center pt-n2 pb-3">
+    <!-- <div class="text-center pt-n2 pb-3">
       {% if workshop.zoom_links|length > 1 %}
           {% if workshop.title ==  'W13: 5th International Workshop on Health Intelligence (W3PHIAI-21)' %}
               <a href="{{ workshop.zoom_links[0] }}" target="_blank"  class="card-link">
@@ -59,13 +59,13 @@
             {% endfor %}
           {% endif %}
       {% endif %}
-    </div>
+    </div> -->
 
-    {{ components.live_sessions(
+    <!-- {{ components.live_sessions(
         workshop.blocks,
         workshop.title,
         "https://virtual.2021.aaai.org/workshop_" + workshop.id + ".html",
-        false) }}
+        false) }} -->
 
   </div>
 </div>

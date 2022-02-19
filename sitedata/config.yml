@@ -1,4 +1,4 @@
-name: DLG4NLP@2021
+name: DLG4NLP@2022
 tagline: Deep Learning on Graphs for Natural Language Processing
 # subtitle: Natural Language Processing
 proceedings_title: Deep Learning on Graphs for Natural Language Processing
@@ -9,12 +9,12 @@ logo:
 citation_date: February 2021
 analytics: UA-179777566-1
 site_url: https://aaai.org/Conferences/AAAI-21/
-site_title: DLG4NLP@2021
+site_title: DLG4NLP@2022
 page_title:
-  prefix: 'DLG4NLP@2021'
+  prefix: 'DLG4NLP@2022'
   separator: ': '
 background_image: static/images/background.jpg
-organization: DLG4NLP@2021 Team
+organization: DLG4NLP@2022 Team
 
 # Path to the folder of paper images.
 paper_images_path: static/images/papers
