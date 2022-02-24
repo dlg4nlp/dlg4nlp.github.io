@@ -1,6 +1,6 @@
 - UID: Deep Learning on Graphs for Natural Language Processing AAAI 2022
   part: part2
-  pdf: /
+  pdf: https://drive.google.com/file/d/1Oxo4WHLjDBCNoqJX6uxf9KzdF4f1d9tO/view?usp=sharing
   video: /
   title: 'DLG4NLP AAAI 2022'
   organizers: Lingfei Wu, Yu Chen, Heng Ji, Yunyao Li, Bang Liu
@@ -85,7 +85,7 @@
         </div>
         <div class="pp-card m-1" style="">
         <div class="card-header">
-        <h2>Outline</h2>
+        <h2>Outline [<a href="https://drive.google.com/file/d/1Oxo4WHLjDBCNoqJX6uxf9KzdF4f1d9tO/view?usp=sharing">Slides</a>]</h2>
         Introduction (30 mins)
         <ul>
         <li>Natural Language Processing: A Graph Perspective</li>
