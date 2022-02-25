@@ -73,6 +73,9 @@
         </div>
   abstract: |-
         <div class="col-md-12 col-xs-12 my-auto p-2" >
+        <center>
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/QZEetG6YX-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
         <div class="pp-card m-1" style="">
         <div class="card-header">
         <h2>Abstract</h2>
